@@ -8,13 +8,16 @@ Requires Python 3.9+ (standard library only — `tkinter` ships with the standar
 ## Files
 
 - **`shikaku_common.py`** — shared data model (`Rect`, `Clue`, `Puzzle`) and the puzzle text format's
-  reader/writer. Imported by the other three scripts.
+  reader/writer. Imported by the other scripts.
 - **`shikaku_gen.py`** — generates a puzzle by tiling: recursively splits the grid into rectangles
   (guillotine cuts) within a min/max area range, then drops one clue per rectangle. Solvable by
-  construction, since the tiling itself is a witness solution.
+  construction, since the tiling itself is a witness solution (not guaranteed to be the *only*
+  solution — pair with `shikaku_solver.py --check-unique` to verify that).
+- **`shikaku_solver.py`** — solves a puzzle automatically via exact-cover search (bitmask Algorithm X,
+  branching on the most-constrained grid cell). Prints the solved puzzle, or checks uniqueness.
 - **`shikaku_display.py`** — renders a puzzle file as text art: the blank clue grid, and (if the file
   includes a witness tiling) the solved grid with rectangle boundaries drawn.
-- **`shikaku_solver.py`** — interactive Tkinter app for solving a puzzle by hand: drag to draw a
+- **`shikaku_play.py`** — interactive Tkinter app for solving a puzzle by hand: drag to draw a
   rectangle, right-click to remove one, live validity feedback, win detection.
 
 ## Usage
@@ -44,10 +47,18 @@ python shikaku_gen.py --seed 1 --solution | python shikaku_display.py   # pipe d
 python shikaku_display.py --unicode puzzle.txt    # nicer box-drawing chars, needs a UTF-8 terminal
 ```
 
+Solve it automatically:
+
+```sh
+python shikaku_solver.py puzzle.txt                    # prints the puzzle with a SOLUTION section filled in
+python shikaku_gen.py --seed 1 | python shikaku_solver.py   # pipe directly, no file
+python shikaku_solver.py puzzle.txt --check-unique     # "Unique solution." / "Multiple solutions (not unique)."
+```
+
 Solve it interactively:
 
 ```sh
-python shikaku_solver.py puzzle.txt   # or launch with no argument and use Open.../New... in the toolbar
+python shikaku_play.py puzzle.txt   # or launch with no argument and use Open.../New... in the toolbar
 ```
 
 ## Puzzle file format

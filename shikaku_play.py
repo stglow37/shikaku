@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Interactive Shikaku solver: a Tkinter desktop app.
+"""Interactive Shikaku player: a Tkinter desktop app.
 
 Drag across cells to place a rectangle; right-click a rectangle to
 remove it. Rectangles are colored green once they cover exactly one
@@ -86,10 +86,10 @@ class NewPuzzleDialog(simpledialog.Dialog):
         self.result = (self.width, self.height, self.min_area, self.max_area, self.split_prob, self.seed)
 
 
-class ShikakuSolverApp:
+class ShikakuPlayApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Shikaku Solver")
+        self.root.title("Shikaku Player")
 
         self.puzzle: Puzzle = None
         self.placed: list[Rect] = []
@@ -318,7 +318,7 @@ class ShikakuSolverApp:
 
 def main():
     root = tk.Tk()
-    app = ShikakuSolverApp(root)
+    app = ShikakuPlayApp(root)
 
     if len(sys.argv) > 1:
         with open(sys.argv[1], encoding="utf-8") as f:
