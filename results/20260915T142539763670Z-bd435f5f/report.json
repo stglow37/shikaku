@@ -1,0 +1,228 @@
+{
+  "created_utc": "2026-09-15T14:25:39.763670+00:00",
+  "python": "3.12.9 (main, Feb 13 2025, 09:16:23)  [GCC UCRT 14.2.0 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "git_head": "d57b8ebe2a53ccc59a51fbd01591ba6011438a11",
+  "git_status": "D .gitignore\n M README.md\n D puzzle.txt\n D sample.txt\n D shikaku_common.py\n D shikaku_display.py\n D shikaku_gen.py\n D shikaku_play.py\n D shikaku_rect_count.py\n D shikaku_solver.py\n?? __pycache__/\n?? docs/\n?? experiments/\n?? outdated/\n?? results/\n?? shikaku/\n?? tests/",
+  "source_sha256": {
+    "shikaku/__init__.py": "8987cd5d93b69270bc873bac27c91fb0eb30a8957d8491c209267afbd24ea7e6",
+    "shikaku/__main__.py": "57e9439d64fcd50141f9c39f0902ac16ba1399ef9904c312a0343725c598f4da",
+    "shikaku/bounds.py": "b77d9b62298f7105e4a2fa34e0276c848738e4114707998f71d9e321073fa286",
+    "shikaku/config.py": "b38b445e9e5632bf637a286d535563d7f456657ecbf74da7f51b2482042c33d8",
+    "shikaku/constructions.py": "ea408cd2fac5b5ed3a1d57ea39cd21e8462150878782a59b254765b95219c93f",
+    "shikaku/model.py": "576b466830480662d894d2321ed8a2d0fea75d4eca648a3245fedda6350872de",
+    "shikaku/solvers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "shikaku/solvers/skyline.py": "88d7ac66f188a70f57d80782855a593ee09e2bf9fa2f4a4c64e221221b2473f6",
+    "shikaku/validation.py": "be81594c17be44ae48429810853d2a85cb491acd473e658e537deecb832a0aea",
+    "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/run.py": "58d817cb66df6b24874f4876bf0884fe8d8f0275c12e1e1b5327d87579871849",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/oracle.py": "726ed86fad7b3db49f88f96cd9c87fd888a72def8f9cb0ad63ccba7633847b08",
+    "tests/test_correctness.py": "73b961b5b8542f04d31e04a68da02a751b58be624e48a8716967b05e14fa48ee",
+    "tests/test_validation.py": "35606aa6193d4f8e183c9f780a63f3bb47d880b55701376cdb8bf25f5611a1af"
+  },
+  "configuration": {
+    "solver": {
+      "solver": "skyline",
+      "options": {
+        "prune": false
+      }
+    },
+    "sizes": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "time_limit": 2.0,
+    "oracle_up_to": 4
+  },
+  "status": "COMPLETED",
+  "results": [
+    {
+      "n": 1,
+      "status": "OPTIMAL",
+      "k": 1,
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "initial_lower_bound": 1,
+      "area_upper_bound": 1,
+      "termination": "search_exhausted",
+      "pruning": false,
+      "nodes": 2,
+      "pruned_nodes": 0,
+      "complete_partitions": 1,
+      "elapsed_seconds": 7.870001718401909e-05,
+      "distinct_areas": [
+        1
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        }
+      ],
+      "oracle_k": 1,
+      "oracle_partitions": 1
+    },
+    {
+      "n": 2,
+      "status": "OPTIMAL",
+      "k": 2,
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "initial_lower_bound": 2,
+      "area_upper_bound": 2,
+      "termination": "search_exhausted",
+      "pruning": false,
+      "nodes": 17,
+      "pruned_nodes": 0,
+      "complete_partitions": 8,
+      "elapsed_seconds": 0.000132200017105788,
+      "distinct_areas": [
+        1,
+        2
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "oracle_k": 2,
+      "oracle_partitions": 8
+    },
+    {
+      "n": 3,
+      "status": "OPTIMAL",
+      "k": 3,
+      "lower_bound": 3,
+      "upper_bound": 3,
+      "initial_lower_bound": 3,
+      "area_upper_bound": 3,
+      "termination": "search_exhausted",
+      "pruning": false,
+      "nodes": 721,
+      "pruned_nodes": 0,
+      "complete_partitions": 322,
+      "elapsed_seconds": 0.004677899996750057,
+      "distinct_areas": [
+        1,
+        2,
+        3
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        }
+      ],
+      "oracle_k": 3,
+      "oracle_partitions": 322
+    },
+    {
+      "n": 4,
+      "status": "OPTIMAL",
+      "k": 5,
+      "lower_bound": 5,
+      "upper_bound": 5,
+      "initial_lower_bound": 4,
+      "area_upper_bound": 5,
+      "termination": "search_exhausted",
+      "pruning": false,
+      "nodes": 161863,
+      "pruned_nodes": 0,
+      "complete_partitions": 70878,
+      "elapsed_seconds": 0.7006560000008903,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 2,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "oracle_k": 5,
+      "oracle_partitions": 70878
+    }
+  ]
+}

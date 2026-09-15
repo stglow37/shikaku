@@ -19,12 +19,17 @@ PAD = 12
 
 COLOR_GRID_LINE = "#888888"
 COLOR_CLUE_TEXT = "#111111"
-COLOR_VALID_FILL = "#b7e4c7"
-COLOR_INVALID_FILL = "#f6b8a2"
 COLOR_VALID_OUTLINE = "#2f9e44"
 COLOR_INVALID_OUTLINE = "#d9480f"
 COLOR_DRAG_OUTLINE = "#1c7ed6"
 COLOR_WITNESS_OUTLINE = "#9775fa"
+
+# Cycled by placement order so each rectangle gets its own fill color;
+# validity is still shown via the outline (green/red) below.
+RECT_PALETTE = [
+    "#b7e4c7", "#a2d2ff", "#ffd6a5", "#ffc6ff", "#bdb2ff",
+    "#caffbf", "#9bf6ff", "#fdffb6", "#ffadad", "#d0f4de",
+]
 
 
 def rects_overlap(a: Rect, b: Rect) -> bool:
@@ -279,13 +284,14 @@ class ShikakuPlayApp:
                     x0, y0, x1, y1, outline=COLOR_WITNESS_OUTLINE, width=2, dash=(4, 3)
                 )
 
-        for rect in self.placed:
+        for i, rect in enumerate(self.placed):
             x0, y0 = self.cell_to_px(rect.y, rect.x)
             x1, y1 = self.cell_to_px(rect.y + rect.h, rect.x + rect.w)
             valid = rect_is_valid(rect, puzzle.clues)
-            fill = COLOR_VALID_FILL if valid else COLOR_INVALID_FILL
+            fill = RECT_PALETTE[i % len(RECT_PALETTE)]
             outline = COLOR_VALID_OUTLINE if valid else COLOR_INVALID_OUTLINE
-            self.canvas.create_rectangle(x0, y0, x1, y1, fill=fill, outline=outline, width=2)
+            width = 2 if valid else 3
+            self.canvas.create_rectangle(x0, y0, x1, y1, fill=fill, outline=outline, width=width)
 
         for row in range(puzzle.height + 1):
             x0, y0 = self.cell_to_px(row, 0)

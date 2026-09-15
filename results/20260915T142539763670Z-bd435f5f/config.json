@@ -1,0 +1,16 @@
+{
+  "solver": {
+    "solver": "skyline",
+    "options": {
+      "prune": false
+    }
+  },
+  "sizes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "time_limit": 2.0,
+  "oracle_up_to": 4
+}

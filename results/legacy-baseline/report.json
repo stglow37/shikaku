@@ -1,0 +1,888 @@
+{
+  "created_utc": "2026-09-15T14:14:59.665063+00:00",
+  "python": "3.12.9 (main, Feb 13 2025, 09:16:23)  [GCC UCRT 14.2.0 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "description": "Single-run timings; 2-second DFS limit for n=5,6,7,8,13.",
+  "results": [
+    {
+      "n": 1,
+      "status": "OPTIMAL",
+      "k": 1,
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "initial_lower_bound": 1,
+      "area_upper_bound": 1,
+      "termination": "search_exhausted",
+      "pruning": false,
+      "nodes": 2,
+      "pruned_nodes": 0,
+      "complete_partitions": 1,
+      "elapsed_seconds": 4.1300023440271616e-05,
+      "distinct_areas": [
+        1
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        }
+      ],
+      "oracle_k": 1,
+      "oracle_partitions": 1
+    },
+    {
+      "n": 1,
+      "status": "OPTIMAL",
+      "k": 1,
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "initial_lower_bound": 1,
+      "area_upper_bound": 1,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 1.4699995517730713e-05,
+      "distinct_areas": [
+        1
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        }
+      ],
+      "oracle_k": 1,
+      "oracle_partitions": 1
+    },
+    {
+      "n": 2,
+      "status": "OPTIMAL",
+      "k": 2,
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "initial_lower_bound": 2,
+      "area_upper_bound": 2,
+      "termination": "search_exhausted",
+      "pruning": false,
+      "nodes": 17,
+      "pruned_nodes": 0,
+      "complete_partitions": 8,
+      "elapsed_seconds": 8.490000618621707e-05,
+      "distinct_areas": [
+        1,
+        2
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "oracle_k": 2,
+      "oracle_partitions": 8
+    },
+    {
+      "n": 2,
+      "status": "OPTIMAL",
+      "k": 2,
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "initial_lower_bound": 2,
+      "area_upper_bound": 2,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 1.5099998563528061e-05,
+      "distinct_areas": [
+        1,
+        2
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "oracle_k": 2,
+      "oracle_partitions": 8
+    },
+    {
+      "n": 3,
+      "status": "OPTIMAL",
+      "k": 3,
+      "lower_bound": 3,
+      "upper_bound": 3,
+      "initial_lower_bound": 3,
+      "area_upper_bound": 3,
+      "termination": "search_exhausted",
+      "pruning": false,
+      "nodes": 721,
+      "pruned_nodes": 0,
+      "complete_partitions": 322,
+      "elapsed_seconds": 0.0024523999891243875,
+      "distinct_areas": [
+        1,
+        2,
+        3
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        }
+      ],
+      "oracle_k": 3,
+      "oracle_partitions": 322
+    },
+    {
+      "n": 3,
+      "status": "OPTIMAL",
+      "k": 3,
+      "lower_bound": 3,
+      "upper_bound": 3,
+      "initial_lower_bound": 3,
+      "area_upper_bound": 3,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.47000134550035e-05,
+      "distinct_areas": [
+        1,
+        2,
+        3
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        }
+      ],
+      "oracle_k": 3,
+      "oracle_partitions": 322
+    },
+    {
+      "n": 4,
+      "status": "OPTIMAL",
+      "k": 5,
+      "lower_bound": 5,
+      "upper_bound": 5,
+      "initial_lower_bound": 4,
+      "area_upper_bound": 5,
+      "termination": "search_exhausted",
+      "pruning": false,
+      "nodes": 161863,
+      "pruned_nodes": 0,
+      "complete_partitions": 70878,
+      "elapsed_seconds": 0.6789913999964483,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 2,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "oracle_k": 5,
+      "oracle_partitions": 70878
+    },
+    {
+      "n": 4,
+      "status": "OPTIMAL",
+      "k": 5,
+      "lower_bound": 5,
+      "upper_bound": 5,
+      "initial_lower_bound": 4,
+      "area_upper_bound": 5,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 33,
+      "pruned_nodes": 23,
+      "complete_partitions": 1,
+      "elapsed_seconds": 0.0001496000331826508,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 2,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "oracle_k": 5,
+      "oracle_partitions": 70878
+    },
+    {
+      "n": 5,
+      "status": "OPTIMAL",
+      "k": 6,
+      "lower_bound": 6,
+      "upper_bound": 6,
+      "initial_lower_bound": 5,
+      "area_upper_bound": 6,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 113,
+      "pruned_nodes": 85,
+      "complete_partitions": 1,
+      "elapsed_seconds": 0.00045689998660236597,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "height": 2,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "height": 3,
+          "width": 2
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "status": "OPTIMAL",
+      "k": 7,
+      "lower_bound": 7,
+      "upper_bound": 7,
+      "initial_lower_bound": 6,
+      "area_upper_bound": 7,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 273,
+      "pruned_nodes": 210,
+      "complete_partitions": 1,
+      "elapsed_seconds": 0.0011274000280536711,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "height": 5,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "height": 2,
+          "width": 2
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 4,
+          "width": 2
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 3,
+          "width": 2
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "status": "OPTIMAL",
+      "k": 9,
+      "lower_bound": 9,
+      "upper_bound": 9,
+      "initial_lower_bound": 9,
+      "area_upper_bound": 9,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 5.6500022765249014e-05,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 3,
+          "width": 3
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "height": 3,
+          "width": 4
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "status": "OPTIMAL",
+      "k": 10,
+      "lower_bound": 10,
+      "upper_bound": 10,
+      "initial_lower_bound": 10,
+      "area_upper_bound": 10,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 5.0799979362636805e-05,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        15
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 3,
+          "width": 3
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "height": 3,
+          "width": 5
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "status": "OPTIMAL",
+      "k": 17,
+      "lower_bound": 17,
+      "upper_bound": 17,
+      "initial_lower_bound": 17,
+      "area_upper_bound": 17,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 9.750004392117262e-05,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        18,
+        21,
+        24
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 3,
+          "width": 5
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "height": 3,
+          "width": 8
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "height": 3,
+          "width": 6
+        },
+        {
+          "row": 10,
+          "col": 6,
+          "height": 3,
+          "width": 7
+        }
+      ]
+    }
+  ]
+}

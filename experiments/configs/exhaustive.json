@@ -1,0 +1,4 @@
+{
+  "solver": "skyline",
+  "options": {"prune": false}
+}
