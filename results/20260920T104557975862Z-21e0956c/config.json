@@ -1,0 +1,19 @@
+{
+  "solver": {
+    "solver": "strips",
+    "options": {
+      "max_parts": 4,
+      "max_height": 6,
+      "workers": 4,
+      "seed": 0
+    }
+  },
+  "sizes": [
+    26,
+    27,
+    28,
+    29
+  ],
+  "time_limit": 10.0,
+  "oracle_up_to": 4
+}

@@ -3,6 +3,7 @@
 import argparse
 from datetime import datetime, timezone
 import hashlib
+from importlib.metadata import PackageNotFoundError, version
 import json
 from math import isfinite
 from pathlib import Path
@@ -12,7 +13,7 @@ import sys
 from uuid import uuid4
 
 from shikaku.config import load_config
-from shikaku.solvers.skyline import solve
+from shikaku.dispatch import solve_configured
 from tests.oracle import cell_oracle
 
 
@@ -25,6 +26,16 @@ def git_output(*args):
                                        stderr=subprocess.DEVNULL).strip()
     except (OSError, subprocess.CalledProcessError):
         return None
+
+
+def dependency_versions():
+    versions = {}
+    for name in ("ortools", "protobuf", "numpy"):
+        try:
+            versions[name] = version(name)
+        except PackageNotFoundError:
+            pass
+    return versions
 
 
 def main():
@@ -52,6 +63,7 @@ def main():
                 "oracle_up_to": 4}
     report = {"created_utc": now.isoformat(), "python": sys.version,
               "platform": platform.platform(), "git_head": git_output("rev-parse", "HEAD"),
+              "dependencies": dependency_versions(),
               "git_status": git_output("status", "--short"), "source_sha256": hashes,
               "configuration": settings, "status": "RUNNING", "results": []}
     (destination / "config.json").write_text(json.dumps(settings, indent=2) + "\n", encoding="utf-8")
@@ -64,19 +76,21 @@ def main():
     save()
     try:
         for n in args.sizes:
-            result = solve(n, **config["options"], time_limit=args.time_limit)
+            result = solve_configured(n, config, time_limit=args.time_limit)
             if n <= 4:
                 expected, partitions = cell_oracle(n)
                 result.update(oracle_k=expected, oracle_partitions=partitions)
                 assert result["lower_bound"] <= expected <= result["upper_bound"]
                 if result["k"] is not None:
                     assert result["k"] == expected
-                if not config["options"]["prune"] and result["termination"] == "search_exhausted":
+                if (config["solver"] == "skyline" and not config["options"]["prune"]
+                        and result["termination"] == "search_exhausted"):
                     assert result["complete_partitions"] == partitions
             report["results"].append(result)
             save()
             print(f"n={n} {result['status']} bounds=[{result['lower_bound']},"
-                  f"{result['upper_bound']}] nodes={result['nodes']}")
+                  f"{result['upper_bound']}] nodes={result.get('nodes', result.get('branches', '-'))}",
+                  flush=True)
     except BaseException as exc:
         report["status"] = "INTERRUPTED" if isinstance(exc, KeyboardInterrupt) else "FAILED"
         report["error"] = str(exc)

@@ -1,0 +1,3294 @@
+{
+  "created_utc": "2026-09-20T10:44:03.579529+00:00",
+  "python": "3.13.15 (v3.13.15:4061bc4c35f, Aug  5 2026, 09:08:51) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.2-arm64-arm-64bit-Mach-O",
+  "git_head": "1f32d605a81ed491f1f4d8aabfe9adebb6002ce4",
+  "dependencies": {
+    "ortools": "9.15.6755",
+    "protobuf": "6.33.6",
+    "numpy": "2.5.3"
+  },
+  "git_status": "M .gitignore\n M experiments/run.py\n M shikaku/__main__.py\n M shikaku/config.py\n?? docs/cpsat.md\n?? docs/theory_progress.md\n?? experiments/configs/cpsat.json\n?? experiments/configs/strips.json\n?? experiments/configs/strips4.json\n?? experiments/configs/strips6.json\n?? experiments/strip_short_trials.json\n?? experiments/strip_trials.json\n?? experiments/theory_strip.py\n?? experiments/theory_strip_results.json\n?? requirements-cpsat.txt\n?? results/20260920T104210002937Z-e7b1665f/\n?? results/20260920T104332109971Z-1547e2a8/\n?? shikaku/dispatch.py\n?? shikaku/improved_constructions.py\n?? shikaku/known.py\n?? shikaku/solvers/cpsat.py\n?? shikaku/solvers/strips.py\n?? tests/test_constructions_improved.py\n?? tests/test_cpsat.py\n?? tests/test_integration.py\n?? tests/test_strips.py",
+  "source_sha256": {
+    "shikaku/__init__.py": "8987cd5d93b69270bc873bac27c91fb0eb30a8957d8491c209267afbd24ea7e6",
+    "shikaku/__main__.py": "56a07b4ed541afcbccebe623fb757c26f0e71eb64f9abac561afa558ea9de6e7",
+    "shikaku/bounds.py": "b77d9b62298f7105e4a2fa34e0276c848738e4114707998f71d9e321073fa286",
+    "shikaku/config.py": "025b217aa61c55ac67e2385dc35a99e07226d0cdbfae0d3523aad7da2cd24cf6",
+    "shikaku/constructions.py": "ea408cd2fac5b5ed3a1d57ea39cd21e8462150878782a59b254765b95219c93f",
+    "shikaku/dispatch.py": "869ed2d22f959ef289601e21b4ce7948413bae270082dbcb0fd2d18cc37e7915",
+    "shikaku/improved_constructions.py": "dd72e34b8b0f0dac7023fbffba1f5b971dbbe0f33e1c3da77d1395f3bfb7f0a7",
+    "shikaku/known.py": "01c7e46fc8e82fb732d75b75e97fe18c5966f8ec2dcec675bb0681b3893c96e7",
+    "shikaku/model.py": "576b466830480662d894d2321ed8a2d0fea75d4eca648a3245fedda6350872de",
+    "shikaku/solvers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "shikaku/solvers/cpsat.py": "9c8459f8728ceef64dd91b18b19c05d59ca95a9161fb9dda0417d3984c0875bc",
+    "shikaku/solvers/skyline.py": "88d7ac66f188a70f57d80782855a593ee09e2bf9fa2f4a4c64e221221b2473f6",
+    "shikaku/solvers/strips.py": "67626954060bfc7340c0ed035e7bc3fc619e1cef7410c2a912f605b28d7e8fda",
+    "shikaku/validation.py": "be81594c17be44ae48429810853d2a85cb491acd473e658e537deecb832a0aea",
+    "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/run.py": "c4459490ae02480f55bcfc3fd892f1ef48eadc5f20be2bb56743866fab1092e6",
+    "experiments/theory_strip.py": "d0520d669a0d9ea7606a5f241582a2ddef0d125f4ca70e4184fc6977ea8ebc67",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/oracle.py": "726ed86fad7b3db49f88f96cd9c87fd888a72def8f9cb0ad63ccba7633847b08",
+    "tests/test_constructions_improved.py": "6596f88c4972ad2d6ce5b97740004819926416c4ed488b13bff4ed1d171ef17c",
+    "tests/test_correctness.py": "73b961b5b8542f04d31e04a68da02a751b58be624e48a8716967b05e14fa48ee",
+    "tests/test_cpsat.py": "d1523db8509f701011e7a709cd705d4ade07bf76f51760d07c023eadc8c30a78",
+    "tests/test_integration.py": "63dce2e51cf363af44f100f238050ee166d2c2ba312ace621415bf9fea10dd67",
+    "tests/test_strips.py": "9f60b3169168c3053c38686407a618b363880b1bd33e68652cbae6ea2a4731ed",
+    "tests/test_validation.py": "35606aa6193d4f8e183c9f780a63f3bb47d880b55701376cdb8bf25f5611a1af"
+  },
+  "configuration": {
+    "solver": {
+      "solver": "skyline",
+      "options": {
+        "prune": true
+      }
+    },
+    "sizes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "time_limit": 2.0,
+    "oracle_up_to": 4
+  },
+  "status": "COMPLETED",
+  "results": [
+    {
+      "n": 1,
+      "status": "OPTIMAL",
+      "k": 1,
+      "lower_bound": 1,
+      "upper_bound": 1,
+      "initial_lower_bound": 1,
+      "area_upper_bound": 1,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 4.1334000115966774e-05,
+      "distinct_areas": [
+        1
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        }
+      ],
+      "oracle_k": 1,
+      "oracle_partitions": 1
+    },
+    {
+      "n": 2,
+      "status": "OPTIMAL",
+      "k": 2,
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "initial_lower_bound": 2,
+      "area_upper_bound": 2,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.745799997683207e-05,
+      "distinct_areas": [
+        1,
+        2
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        }
+      ],
+      "oracle_k": 2,
+      "oracle_partitions": 8
+    },
+    {
+      "n": 3,
+      "status": "OPTIMAL",
+      "k": 3,
+      "lower_bound": 3,
+      "upper_bound": 3,
+      "initial_lower_bound": 3,
+      "area_upper_bound": 3,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.8959000019312953e-05,
+      "distinct_areas": [
+        1,
+        2,
+        3
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        }
+      ],
+      "oracle_k": 3,
+      "oracle_partitions": 322
+    },
+    {
+      "n": 4,
+      "status": "OPTIMAL",
+      "k": 5,
+      "lower_bound": 5,
+      "upper_bound": 5,
+      "initial_lower_bound": 4,
+      "area_upper_bound": 5,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 33,
+      "pruned_nodes": 23,
+      "complete_partitions": 1,
+      "elapsed_seconds": 0.00012900000001536682,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 2,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 2,
+          "width": 3
+        }
+      ],
+      "oracle_k": 5,
+      "oracle_partitions": 70878
+    },
+    {
+      "n": 5,
+      "status": "OPTIMAL",
+      "k": 6,
+      "lower_bound": 6,
+      "upper_bound": 6,
+      "initial_lower_bound": 5,
+      "area_upper_bound": 6,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 113,
+      "pruned_nodes": 85,
+      "complete_partitions": 1,
+      "elapsed_seconds": 0.00016283299987662758,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "height": 2,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "height": 3,
+          "width": 2
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "status": "OPTIMAL",
+      "k": 7,
+      "lower_bound": 7,
+      "upper_bound": 7,
+      "initial_lower_bound": 6,
+      "area_upper_bound": 7,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 273,
+      "pruned_nodes": 210,
+      "complete_partitions": 1,
+      "elapsed_seconds": 0.0003706249999595457,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "height": 5,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "height": 2,
+          "width": 2
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 4,
+          "width": 2
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 3,
+          "width": 2
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "status": "OPTIMAL",
+      "k": 9,
+      "lower_bound": 9,
+      "upper_bound": 9,
+      "initial_lower_bound": 9,
+      "area_upper_bound": 9,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.5457999981881585e-05,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        12
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 3,
+          "width": 3
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "height": 3,
+          "width": 4
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "status": "OPTIMAL",
+      "k": 10,
+      "lower_bound": 10,
+      "upper_bound": 10,
+      "initial_lower_bound": 10,
+      "area_upper_bound": 10,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.274999997098348e-05,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        15
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 3,
+          "width": 3
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "height": 3,
+          "width": 5
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "status": "OPTIMAL",
+      "k": 12,
+      "lower_bound": 12,
+      "upper_bound": 12,
+      "initial_lower_bound": 11,
+      "area_upper_bound": 12,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 52430,
+      "pruned_nodes": 45414,
+      "complete_partitions": 1,
+      "elapsed_seconds": 0.08406525000009424,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "height": 4,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "height": 7,
+          "width": 2
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "height": 3,
+          "width": 3
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 8,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 7,
+          "width": 1
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "height": 6,
+          "width": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "height": 4,
+          "width": 3
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "height": 5,
+          "width": 1
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "height": 2,
+          "width": 5
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "status": "OPTIMAL",
+      "k": 13,
+      "lower_bound": 13,
+      "upper_bound": 13,
+      "initial_lower_bound": 12,
+      "area_upper_bound": 13,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 547825,
+      "pruned_nodes": 486795,
+      "complete_partitions": 1,
+      "elapsed_seconds": 0.7641976669999622,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        12,
+        14,
+        15
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "height": 4,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "height": 4,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 7,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 3,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "height": 6,
+          "width": 1
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "height": 5,
+          "width": 1
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "height": 4,
+          "width": 3
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "height": 5,
+          "width": 3
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 9,
+          "col": 0,
+          "height": 1,
+          "width": 10
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "status": "OPTIMAL",
+      "k": 14,
+      "lower_bound": 14,
+      "upper_bound": 14,
+      "initial_lower_bound": 13,
+      "area_upper_bound": 14,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 1048527,
+      "pruned_nodes": 934001,
+      "complete_partitions": 1,
+      "elapsed_seconds": 1.5605127499998162,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "height": 2,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "height": 3,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "height": 4,
+          "width": 1
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "height": 4,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 9,
+          "height": 7,
+          "width": 2
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 5,
+          "width": 1
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "height": 5,
+          "width": 3
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 7,
+          "width": 1
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 6,
+          "width": 1
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 3,
+          "width": 3
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 3,
+          "width": 4
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "height": 2,
+          "width": 5
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "height": 1,
+          "width": 11
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "status": "TIME_LIMIT",
+      "k": null,
+      "lower_bound": 14,
+      "upper_bound": 16,
+      "initial_lower_bound": 14,
+      "area_upper_bound": 16,
+      "termination": "time_limit",
+      "pruning": true,
+      "nodes": 1175843,
+      "pruned_nodes": 1061021,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.000103040999875,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        15,
+        21
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 3,
+          "width": 5
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "height": 3,
+          "width": 7
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 10,
+          "col": 11,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 11,
+          "col": 11,
+          "height": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "status": "OPTIMAL",
+      "k": 17,
+      "lower_bound": 17,
+      "upper_bound": 17,
+      "initial_lower_bound": 17,
+      "area_upper_bound": 17,
+      "termination": "upper_bound_reached",
+      "pruning": true,
+      "nodes": 0,
+      "pruned_nodes": 0,
+      "complete_partitions": 0,
+      "elapsed_seconds": 0.00011300000005576294,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        15,
+        18,
+        21,
+        24
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 3,
+          "width": 5
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "height": 3,
+          "width": 8
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "height": 3,
+          "width": 6
+        },
+        {
+          "row": 10,
+          "col": 6,
+          "height": 3,
+          "width": 7
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "status": "TIME_LIMIT",
+      "k": null,
+      "lower_bound": 18,
+      "upper_bound": 19,
+      "initial_lower_bound": 18,
+      "area_upper_bound": 19,
+      "termination": "time_limit",
+      "pruning": true,
+      "nodes": 1148801,
+      "pruned_nodes": 1052142,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.000050083000133,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        24,
+        27
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 1,
+          "width": 14
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "height": 3,
+          "width": 5
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "height": 3,
+          "width": 9
+        },
+        {
+          "row": 11,
+          "col": 0,
+          "height": 3,
+          "width": 6
+        },
+        {
+          "row": 11,
+          "col": 6,
+          "height": 3,
+          "width": 8
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "status": "TIME_LIMIT",
+      "k": null,
+      "lower_bound": 19,
+      "upper_bound": 20,
+      "initial_lower_bound": 19,
+      "area_upper_bound": 20,
+      "termination": "time_limit",
+      "pruning": true,
+      "nodes": 1112196,
+      "pruned_nodes": 1028336,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.000031999999919,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        18,
+        21,
+        24,
+        27
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 14
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 1,
+          "width": 15
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "height": 3,
+          "width": 6
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "height": 3,
+          "width": 9
+        },
+        {
+          "row": 11,
+          "col": 0,
+          "height": 3,
+          "width": 7
+        },
+        {
+          "row": 11,
+          "col": 7,
+          "height": 3,
+          "width": 8
+        },
+        {
+          "row": 14,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 11,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 12,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 13,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 14,
+          "col": 14,
+          "height": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "status": "TIME_LIMIT",
+      "k": null,
+      "lower_bound": 20,
+      "upper_bound": 21,
+      "initial_lower_bound": 20,
+      "area_upper_bound": 21,
+      "termination": "time_limit",
+      "pruning": true,
+      "nodes": 1059901,
+      "pruned_nodes": 981000,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.000058625000065,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        18,
+        21,
+        27,
+        30
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 15
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 14
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "height": 1,
+          "width": 16
+        },
+        {
+          "row": 9,
+          "col": 0,
+          "height": 3,
+          "width": 6
+        },
+        {
+          "row": 9,
+          "col": 6,
+          "height": 3,
+          "width": 10
+        },
+        {
+          "row": 12,
+          "col": 0,
+          "height": 3,
+          "width": 7
+        },
+        {
+          "row": 12,
+          "col": 7,
+          "height": 3,
+          "width": 9
+        },
+        {
+          "row": 15,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 11,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 12,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 13,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 14,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 15,
+          "height": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "n": 17,
+      "status": "TIME_LIMIT",
+      "k": null,
+      "lower_bound": 21,
+      "upper_bound": 23,
+      "initial_lower_bound": 21,
+      "area_upper_bound": 23,
+      "termination": "time_limit",
+      "pruning": true,
+      "nodes": 996225,
+      "pruned_nodes": 927403,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.000041250000095,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        30,
+        33
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 16
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 15
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 14
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "height": 1,
+          "width": 17
+        },
+        {
+          "row": 9,
+          "col": 0,
+          "height": 3,
+          "width": 6
+        },
+        {
+          "row": 9,
+          "col": 6,
+          "height": 3,
+          "width": 11
+        },
+        {
+          "row": 12,
+          "col": 0,
+          "height": 3,
+          "width": 7
+        },
+        {
+          "row": 12,
+          "col": 7,
+          "height": 3,
+          "width": 10
+        },
+        {
+          "row": 15,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 11,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 12,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 13,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 14,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 15,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 15,
+          "col": 16,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 11,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 12,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 13,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 14,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 15,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 16,
+          "height": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "n": 18,
+      "status": "TIME_LIMIT",
+      "k": null,
+      "lower_bound": 22,
+      "upper_bound": 24,
+      "initial_lower_bound": 22,
+      "area_upper_bound": 24,
+      "termination": "time_limit",
+      "pruning": true,
+      "nodes": 917649,
+      "pruned_nodes": 857599,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.0000528749999376,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        21,
+        24,
+        30,
+        33
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 17
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 16
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 15
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 14
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 8,
+          "col": 9,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 9,
+          "col": 0,
+          "height": 1,
+          "width": 18
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "height": 3,
+          "width": 7
+        },
+        {
+          "row": 10,
+          "col": 7,
+          "height": 3,
+          "width": 11
+        },
+        {
+          "row": 13,
+          "col": 0,
+          "height": 3,
+          "width": 8
+        },
+        {
+          "row": 13,
+          "col": 8,
+          "height": 3,
+          "width": 10
+        },
+        {
+          "row": 16,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 11,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 12,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 13,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 14,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 15,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 16,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 16,
+          "col": 17,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 1,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 2,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 3,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 4,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 5,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 6,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 7,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 8,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 9,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 10,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 11,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 12,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 13,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 14,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 15,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 16,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 17,
+          "col": 17,
+          "height": 1,
+          "width": 1
+        }
+      ]
+    },
+    {
+      "n": 19,
+      "status": "TIME_LIMIT",
+      "k": null,
+      "lower_bound": 25,
+      "upper_bound": 26,
+      "initial_lower_bound": 25,
+      "area_upper_bound": 26,
+      "termination": "time_limit",
+      "pruning": true,
+      "nodes": 1146006,
+      "pruned_nodes": 1079714,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.0000330840000515,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        24,
+        27,
+        30,
+        33,
+        36
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 18
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 17
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 16
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 15
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 14
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 8,
+          "col": 9,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 9,
+          "col": 0,
+          "height": 1,
+          "width": 19
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "height": 3,
+          "width": 7
+        },
+        {
+          "row": 10,
+          "col": 7,
+          "height": 3,
+          "width": 12
+        },
+        {
+          "row": 13,
+          "col": 0,
+          "height": 3,
+          "width": 8
+        },
+        {
+          "row": 13,
+          "col": 8,
+          "height": 3,
+          "width": 11
+        },
+        {
+          "row": 16,
+          "col": 0,
+          "height": 3,
+          "width": 9
+        },
+        {
+          "row": 16,
+          "col": 9,
+          "height": 3,
+          "width": 10
+        }
+      ]
+    },
+    {
+      "n": 20,
+      "status": "TIME_LIMIT",
+      "k": null,
+      "lower_bound": 26,
+      "upper_bound": 27,
+      "initial_lower_bound": 26,
+      "area_upper_bound": 27,
+      "termination": "time_limit",
+      "pruning": true,
+      "nodes": 1698303,
+      "pruned_nodes": 1602344,
+      "complete_partitions": 0,
+      "elapsed_seconds": 2.000040042000137,
+      "distinct_areas": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        24,
+        27,
+        33,
+        36,
+        39
+      ],
+      "rectangles": [
+        {
+          "row": 0,
+          "col": 0,
+          "height": 1,
+          "width": 1
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "height": 1,
+          "width": 19
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "height": 1,
+          "width": 2
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "height": 1,
+          "width": 18
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "height": 1,
+          "width": 3
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "height": 1,
+          "width": 17
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "height": 1,
+          "width": 4
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "height": 1,
+          "width": 16
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "height": 1,
+          "width": 5
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "height": 1,
+          "width": 15
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "height": 1,
+          "width": 6
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "height": 1,
+          "width": 14
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "height": 1,
+          "width": 7
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "height": 1,
+          "width": 13
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "height": 1,
+          "width": 8
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "height": 1,
+          "width": 12
+        },
+        {
+          "row": 8,
+          "col": 0,
+          "height": 1,
+          "width": 9
+        },
+        {
+          "row": 8,
+          "col": 9,
+          "height": 1,
+          "width": 11
+        },
+        {
+          "row": 9,
+          "col": 0,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 9,
+          "col": 10,
+          "height": 1,
+          "width": 10
+        },
+        {
+          "row": 10,
+          "col": 0,
+          "height": 1,
+          "width": 20
+        },
+        {
+          "row": 11,
+          "col": 0,
+          "height": 3,
+          "width": 7
+        },
+        {
+          "row": 11,
+          "col": 7,
+          "height": 3,
+          "width": 13
+        },
+        {
+          "row": 14,
+          "col": 0,
+          "height": 3,
+          "width": 8
+        },
+        {
+          "row": 14,
+          "col": 8,
+          "height": 3,
+          "width": 12
+        },
+        {
+          "row": 17,
+          "col": 0,
+          "height": 3,
+          "width": 9
+        },
+        {
+          "row": 17,
+          "col": 9,
+          "height": 3,
+          "width": 11
+        }
+      ]
+    }
+  ]
+}

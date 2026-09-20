@@ -1,0 +1,2 @@
+# Optional: the standard-library solvers do not import this dependency.
+ortools>=9.12,<10

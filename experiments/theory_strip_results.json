@@ -1,0 +1,1930 @@
+[
+  {
+    "n": 16,
+    "count": 21,
+    "theorem_lower": 21,
+    "upper": 21,
+    "rectangles": 22,
+    "exact": true
+  },
+  {
+    "n": 17,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 23,
+    "rectangles": 24,
+    "exact": true
+  },
+  {
+    "n": 18,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 24,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 19,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 26,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 20,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 27,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 21,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 28,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 22,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 30,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 23,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 31,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 24,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 33,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 25,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 34,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 26,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 35,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 27,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 37,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 28,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 38,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 29,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 40,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 30,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 41,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 31,
+    "count": 23,
+    "theorem_lower": 21,
+    "upper": 43,
+    "rectangles": 24,
+    "exact": false
+  },
+  {
+    "n": 32,
+    "count": 43,
+    "theorem_lower": 43,
+    "upper": 44,
+    "rectangles": 44,
+    "exact": false
+  },
+  {
+    "n": 33,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 45,
+    "rectangles": 46,
+    "exact": true
+  },
+  {
+    "n": 34,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 46,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 35,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 48,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 36,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 49,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 37,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 51,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 38,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 52,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 39,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 53,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 40,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 55,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 41,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 56,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 42,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 58,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 43,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 59,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 44,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 61,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 45,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 62,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 46,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 63,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 47,
+    "count": 45,
+    "theorem_lower": 43,
+    "upper": 65,
+    "rectangles": 46,
+    "exact": false
+  },
+  {
+    "n": 48,
+    "count": 65,
+    "theorem_lower": 65,
+    "upper": 66,
+    "rectangles": 66,
+    "exact": false
+  },
+  {
+    "n": 49,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 68,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 50,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 69,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 51,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 70,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 52,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 72,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 53,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 73,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 54,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 75,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 55,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 76,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 56,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 77,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 57,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 79,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 58,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 80,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 59,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 81,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 60,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 83,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 61,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 84,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 62,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 86,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 63,
+    "count": 67,
+    "theorem_lower": 65,
+    "upper": 87,
+    "rectangles": 68,
+    "exact": false
+  },
+  {
+    "n": 64,
+    "count": 87,
+    "theorem_lower": 87,
+    "upper": 88,
+    "rectangles": 88,
+    "exact": false
+  },
+  {
+    "n": 65,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 90,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 66,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 91,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 67,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 93,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 68,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 94,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 69,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 95,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 70,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 97,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 71,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 98,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 72,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 100,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 73,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 101,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 74,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 103,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 75,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 104,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 76,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 105,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 77,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 107,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 78,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 108,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 79,
+    "count": 89,
+    "theorem_lower": 87,
+    "upper": 110,
+    "rectangles": 90,
+    "exact": false
+  },
+  {
+    "n": 80,
+    "count": 109,
+    "theorem_lower": 109,
+    "upper": 111,
+    "rectangles": 110,
+    "exact": false
+  },
+  {
+    "n": 81,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 112,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 82,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 114,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 83,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 115,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 84,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 117,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 85,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 118,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 86,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 119,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 87,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 121,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 88,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 122,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 89,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 124,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 90,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 125,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 91,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 126,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 92,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 128,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 93,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 129,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 94,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 130,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 95,
+    "count": 111,
+    "theorem_lower": 109,
+    "upper": 132,
+    "rectangles": 112,
+    "exact": false
+  },
+  {
+    "n": 96,
+    "count": 131,
+    "theorem_lower": 131,
+    "upper": 133,
+    "rectangles": 132,
+    "exact": false
+  },
+  {
+    "n": 97,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 135,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 98,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 136,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 99,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 137,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 100,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 139,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 101,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 140,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 102,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 142,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 103,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 143,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 104,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 145,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 105,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 146,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 106,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 147,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 107,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 149,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 108,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 150,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 109,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 152,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 110,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 154,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 111,
+    "count": 133,
+    "theorem_lower": 131,
+    "upper": 155,
+    "rectangles": 134,
+    "exact": false
+  },
+  {
+    "n": 112,
+    "count": 153,
+    "theorem_lower": 153,
+    "upper": 156,
+    "rectangles": 154,
+    "exact": false
+  },
+  {
+    "n": 113,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 158,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 114,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 159,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 115,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 161,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 116,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 162,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 117,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 163,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 118,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 165,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 119,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 166,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 120,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 167,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 121,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 169,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 122,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 170,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 123,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 171,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 124,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 173,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 125,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 174,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 126,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 175,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 127,
+    "count": 155,
+    "theorem_lower": 153,
+    "upper": 177,
+    "rectangles": 156,
+    "exact": false
+  },
+  {
+    "n": 128,
+    "count": 175,
+    "theorem_lower": 175,
+    "upper": 178,
+    "rectangles": 176,
+    "exact": false
+  },
+  {
+    "n": 129,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 180,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 130,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 181,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 131,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 183,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 132,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 184,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 133,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 185,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 134,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 187,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 135,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 188,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 136,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 189,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 137,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 191,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 138,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 192,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 139,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 194,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 140,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 195,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 141,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 197,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 142,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 198,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 143,
+    "count": 177,
+    "theorem_lower": 175,
+    "upper": 199,
+    "rectangles": 178,
+    "exact": false
+  },
+  {
+    "n": 144,
+    "count": 197,
+    "theorem_lower": 197,
+    "upper": 201,
+    "rectangles": 198,
+    "exact": false
+  },
+  {
+    "n": 145,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 202,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 146,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 203,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 147,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 205,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 148,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 206,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 149,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 208,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 150,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 209,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 151,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 211,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 152,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 212,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 153,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 213,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 154,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 215,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 155,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 216,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 156,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 217,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 157,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 219,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 158,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 221,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 159,
+    "count": 199,
+    "theorem_lower": 197,
+    "upper": 222,
+    "rectangles": 200,
+    "exact": false
+  },
+  {
+    "n": 160,
+    "count": 219,
+    "theorem_lower": 219,
+    "upper": 223,
+    "rectangles": 220,
+    "exact": false
+  },
+  {
+    "n": 161,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 225,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 162,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 226,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 163,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 228,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 164,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 229,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 165,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 230,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 166,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 232,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 167,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 233,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 168,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 235,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 169,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 236,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 170,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 237,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 171,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 239,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 172,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 240,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 173,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 242,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 174,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 243,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 175,
+    "count": 221,
+    "theorem_lower": 219,
+    "upper": 244,
+    "rectangles": 222,
+    "exact": false
+  },
+  {
+    "n": 176,
+    "count": 241,
+    "theorem_lower": 241,
+    "upper": 246,
+    "rectangles": 242,
+    "exact": false
+  },
+  {
+    "n": 177,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 247,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 178,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 248,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 179,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 250,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 180,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 251,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 181,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 253,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 182,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 254,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 183,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 256,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 184,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 257,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 185,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 258,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 186,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 260,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 187,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 261,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 188,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 262,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 189,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 264,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 190,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 265,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 191,
+    "count": 243,
+    "theorem_lower": 241,
+    "upper": 267,
+    "rectangles": 244,
+    "exact": false
+  },
+  {
+    "n": 192,
+    "count": 263,
+    "theorem_lower": 263,
+    "upper": 268,
+    "rectangles": 264,
+    "exact": false
+  },
+  {
+    "n": 193,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 270,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 194,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 271,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 195,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 272,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 196,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 274,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 197,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 275,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 198,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 277,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 199,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 278,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 200,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 280,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 201,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 281,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 202,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 283,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 203,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 284,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 204,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 285,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 205,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 287,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 206,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 288,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 207,
+    "count": 265,
+    "theorem_lower": 263,
+    "upper": 289,
+    "rectangles": 266,
+    "exact": false
+  },
+  {
+    "n": 208,
+    "count": 285,
+    "theorem_lower": 285,
+    "upper": 291,
+    "rectangles": 286,
+    "exact": false
+  },
+  {
+    "n": 209,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 292,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 210,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 293,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 211,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 295,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 212,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 296,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 213,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 298,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 214,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 299,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 215,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 300,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 216,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 302,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 217,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 303,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 218,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 304,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 219,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 306,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 220,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 307,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 221,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 308,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 222,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 310,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 223,
+    "count": 287,
+    "theorem_lower": 285,
+    "upper": 311,
+    "rectangles": 288,
+    "exact": false
+  },
+  {
+    "n": 224,
+    "count": 307,
+    "theorem_lower": 307,
+    "upper": 313,
+    "rectangles": 308,
+    "exact": false
+  },
+  {
+    "n": 225,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 314,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 226,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 315,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 227,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 317,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 228,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 318,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 229,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 320,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 230,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 322,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 231,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 323,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 232,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 324,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 233,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 326,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 234,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 327,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 235,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 329,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 236,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 330,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 237,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 331,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 238,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 333,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 239,
+    "count": 309,
+    "theorem_lower": 307,
+    "upper": 334,
+    "rectangles": 310,
+    "exact": false
+  },
+  {
+    "n": 240,
+    "count": 329,
+    "theorem_lower": 329,
+    "upper": 336,
+    "rectangles": 330,
+    "exact": false
+  },
+  {
+    "n": 241,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 337,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 242,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 339,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 243,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 340,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 244,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 341,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 245,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 343,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 246,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 344,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 247,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 345,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 248,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 347,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 249,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 348,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 250,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 350,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 251,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 351,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 252,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 353,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 253,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 354,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 254,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 355,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 255,
+    "count": 331,
+    "theorem_lower": 329,
+    "upper": 357,
+    "rectangles": 332,
+    "exact": false
+  },
+  {
+    "n": 256,
+    "count": 351,
+    "theorem_lower": 351,
+    "upper": 358,
+    "rectangles": 352,
+    "exact": false
+  }
+]

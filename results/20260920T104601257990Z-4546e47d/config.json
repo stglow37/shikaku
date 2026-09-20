@@ -1,0 +1,15 @@
+{
+  "solver": {
+    "solver": "cpsat",
+    "options": {
+      "num_workers": 4,
+      "random_seed": 0,
+      "log_search_progress": false
+    }
+  },
+  "sizes": [
+    24
+  ],
+  "time_limit": 45.0,
+  "oracle_up_to": 4
+}

@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from .config import load_config
-from .solvers.skyline import solve
+from .dispatch import solve_configured
 
 
 def main():
@@ -19,9 +19,11 @@ def main():
     try:
         config = load_config(args.config)
         if args.no_prune:
+            if config["solver"] != "skyline":
+                raise ValueError("--no-prune applies only to skyline")
             config["options"]["prune"] = False
-        result = solve(args.n, **config["options"], time_limit=args.time_limit)
-    except (ValueError, OSError) as exc:
+        result = solve_configured(args.n, config, time_limit=args.time_limit)
+    except (ValueError, OSError, ImportError) as exc:
         parser.error(str(exc))
     result["configuration"] = config
     output = json.dumps(result, indent=2) + "\n"
