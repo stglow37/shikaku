@@ -4,7 +4,7 @@ from dataclasses import asdict
 from math import ceil, isfinite
 from time import perf_counter
 
-from ..bounds import additional_bound
+from ..bounds import area_upper_bound
 from ..constructions import initial_partition
 from ..improved_constructions import best_partition, partition_11_over_8
 from ..model import Rect
@@ -63,17 +63,40 @@ def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
         raise ValueError("log_search_progress must be boolean")
     if type(use_hints) is not bool:
         raise ValueError("use_hints must be boolean")
-    # Validate the strategy before importing the optional dependency.
-    seed_rects = seed_partition(n, seed_strategy)
-
     started = perf_counter()
+    # Establish independent bounds before importing or constructing CP-SAT.
+    best_rects = seed_partition(n, seed_strategy)
+    initial_lower = best = validate_partition(n, best_rects)
+    area_upper = area_upper_bound(n)
+    witness_source = ("initial_construction" if seed_strategy == "baseline"
+                      else f"{seed_strategy}_construction")
+    if best == area_upper:
+        elapsed = perf_counter() - started
+        return {
+            "n": n, "solver": "cpsat", "status": "OPTIMAL",
+            "solver_status": "NOT_RUN", "k": best,
+            "lower_bound": best, "upper_bound": best,
+            "initial_lower_bound": initial_lower, "area_upper_bound": area_upper,
+            "solver_objective": None, "solver_upper_bound": None,
+            "termination": "certified_initial_bounds",
+            "witness_source": witness_source,
+            "nodes": 0, "branches": 0, "conflicts": 0,
+            "rectangle_variables": 0, "area_variables": 0,
+            "cell_rectangle_incidences": 0,
+            "dependency_import_seconds": 0.0, "model_build_seconds": 0.0,
+            "solve_call_seconds": 0.0, "solver_wall_seconds": 0.0,
+            "elapsed_seconds": elapsed, "time_limit_seconds": time_limit,
+            "ortools_version": None, "num_workers": num_workers,
+            "random_seed": random_seed, "seed_strategy": seed_strategy,
+            "use_hints": use_hints,
+            "distinct_areas": sorted({rect.area for rect in best_rects}),
+            "rectangles": [asdict(rect) for rect in best_rects],
+        }
+
     version, cp_model = _load_ortools()
     imported = perf_counter()
     areas = sorted({height * width for height in range(1, n + 1)
                     for width in range(1, n + 1)})
-    area_upper = additional_bound(areas, frozenset(), n * n)
-    best_rects = seed_rects
-    initial_lower = best = validate_partition(n, best_rects)
     seed_rects = set(best_rects)
     seed_areas = {rect.area for rect in best_rects}
 
@@ -134,8 +157,6 @@ def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
 
     upper = area_upper
     solver_upper = solver_objective = None
-    witness_source = ("initial_construction" if seed_strategy == "baseline"
-                      else f"{seed_strategy}_construction")
     if status in (cp_model.OPTIMAL, cp_model.FEASIBLE):
         candidate = [rect for rect, variable in zip(rects, selected)
                      if solver.value(variable)]

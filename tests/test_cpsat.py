@@ -51,7 +51,7 @@ class CpSatInputTests(unittest.TestCase):
 
         with patch("builtins.__import__", side_effect=import_without_ortools):
             with self.assertRaisesRegex(ImportError, "requirements-cpsat.txt"):
-                solve(2)
+                solve(5)
 
 
 @unittest.skipUnless(HAS_ORTOOLS, "optional OR-Tools dependency not installed")
@@ -61,12 +61,15 @@ class CpSatTests(unittest.TestCase):
             with self.subTest(n=n):
                 expected, _ = cell_oracle(n)
                 result = solve(n)
-                self.assertEqual(result["solver_status"], "OPTIMAL")
+                expected_status = "NOT_RUN" if n < 4 else "OPTIMAL"
+                self.assertEqual(result["solver_status"], expected_status)
                 self.assertEqual(result["k"], expected)
                 self.assertEqual(result["lower_bound"], expected)
                 self.assertEqual(result["upper_bound"], expected)
-                self.assertEqual(result["witness_source"], "cp_sat")
-                self.assertEqual(result["rectangle_variables"], (n * (n + 1) // 2)**2)
+                expected_source = "initial_construction" if n < 4 else "cp_sat"
+                self.assertEqual(result["witness_source"], expected_source)
+                expected_variables = 0 if n < 4 else (n * (n + 1) // 2)**2
+                self.assertEqual(result["rectangle_variables"], expected_variables)
                 self.assertEqual(validate_partition(n, [Rect(**r) for r in
                                                        result["rectangles"]]), expected)
 
@@ -88,15 +91,17 @@ class CpSatTests(unittest.TestCase):
         result = solve(16, time_limit=0, seed_strategy="eleven_eighths",
                        use_hints=False)
         self.assertEqual(result["k"], 21)
+        self.assertEqual(result["solver_status"], "NOT_RUN")
         self.assertEqual(result["seed_strategy"], "eleven_eighths")
         self.assertFalse(result["use_hints"])
 
-    def test_exact_by_independent_bounds_even_when_solver_unknown(self):
+    def test_exact_by_independent_bounds_skips_solver(self):
         result = solve(7, time_limit=0)
-        self.assertEqual(result["solver_status"], "UNKNOWN")
+        self.assertEqual(result["solver_status"], "NOT_RUN")
         self.assertEqual(result["status"], "OPTIMAL")
-        self.assertEqual(result["termination"], "certified_bounds_meet")
+        self.assertEqual(result["termination"], "certified_initial_bounds")
         self.assertEqual(result["k"], 9)
+        self.assertEqual(result["rectangle_variables"], 0)
 
     def test_feasible_is_not_automatically_optimal(self):
         from ortools.sat.python import cp_model

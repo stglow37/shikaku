@@ -19,6 +19,8 @@ OR-Tools는 선택 의존성이다. 기존 표준 라이브러리 풀이기는 �
 독립 검사한 기존 구성의 점수를 B, 가능한 넓이 합으로 얻은 상한을 U라 두고
 `B <= sum(y_a) <= U`와 `sum(a*y_a) <= n*n`도 추가한다.
 초기 구성은 전체 변수의 힌트로 전달한다. 힌트와 하한 제약은 최적해를 제거하지 않는다.
+초기 구성에서 이미 B=U이면 OR-Tools를 import하거나 모형을 만들지 않고 즉시
+`termination=certified_initial_bounds`로 반환한다.
 
 직사각형 변수는 `[n(n+1)/2]^2`개다. 각 칸 덮개 제약에 들어가는 항의 총수는
 `[n(n+1)(n+2)/6]^2`개로 O(n^6)이다. 모델 생성 비용과 메모리는 이 항수에
@@ -31,8 +33,9 @@ OR-Tools는 선택 의존성이다. 기존 표준 라이브러리 풀이기는 �
   상·하한이 일치하지 않으면 `k`는 `null`이다.
 - `UNKNOWN`: solver의 해와 목적값을 읽지 않는다. 독립 검증한 초기 분할과
   이론적 면적 상한을 보존한다. solver의 기본 상한 필드도 증명에 사용하지 않는다.
-- 초기 구성이나 발견한 해가 인증된 상한에 도달하면 solver 상태와 관계없이 정확하다.
-  `termination=certified_bounds_meet`와 원래 `solver_status`로 구별한다.
+- 초기 구성에서 bounds가 만나면 `solver_status=NOT_RUN`과
+  `termination=certified_initial_bounds`로 구별한다. 실행 중 발견한 해와 상한이 만나면
+  `termination=certified_bounds_meet`와 원래 solver 상태를 보존한다.
 - 이 문제는 초기 구성이 항상 있으므로 `INFEASIBLE`이나 `MODEL_INVALID`는 오류다.
 
 `status`는 기존 풀이기와 동일하게 인증된 정확값에는 `OPTIMAL`, 시간 제한으로
@@ -43,7 +46,7 @@ OR-Tools의 정확성에 의존한다. 별도의 UNSAT 증명 파일을 생성�
 
 ## 시간 제한과 재현성
 
-`time_limit`은 CP-SAT `solve` 호출에 전달하는 제한이다. Python의 모델 구성,
+초기 bounds가 만나지 않을 때 `time_limit`은 CP-SAT `solve` 호출에 전달하는 제한이다. Python의 모델 구성,
 의존성 import, 해 추출과 검증을 중단하지 않으므로 전체 실행 시간 제한과 다르다.
 출력에 `dependency_import_seconds`, `model_build_seconds`, `solve_call_seconds`,
 `solver_wall_seconds`, `elapsed_seconds`를 분리해 기록한다.
