@@ -64,7 +64,7 @@
         "solver": "cpsat",
         "options": {"num_workers": 1, "random_seed": 0, "seed_strategy": "best_known", "use_hints": true}
       },
-      "sizes": [24, 27, 30, 33, 36, 40],
+      "sizes": [24, 27, 30, 33],
       "time_limit_seconds": 30
     },
     {
