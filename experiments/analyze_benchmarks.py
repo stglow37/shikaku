@@ -101,7 +101,7 @@ def _markdown(rows: list[dict]) -> str:
                 f"{_fmt(row['median_solve_seconds'])} | {_fmt(row['median_nodes'], 0)} |"
             )
         lines.append("")
-    return "\n".join(lines) + "\n"
+    return "\n".join(lines).rstrip() + "\n"
 
 
 def main() -> None:
@@ -123,7 +123,11 @@ def main() -> None:
         encoding="utf-8")
     (destination / "summary.md").write_text(_markdown(rows), encoding="utf-8")
     buffer = io.StringIO(newline="")
-    writer = csv.DictWriter(buffer, fieldnames=list(rows[0]) if rows else ["suite"])
+    writer = csv.DictWriter(
+        buffer,
+        fieldnames=list(rows[0]) if rows else ["suite"],
+        lineterminator="\n",
+    )
     writer.writeheader()
     writer.writerows(rows)
     (destination / "summary.csv").write_text(buffer.getvalue(), encoding="utf-8")

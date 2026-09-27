@@ -70,4 +70,3 @@ within one solver family. A timeout is not evidence of infeasibility.
 | skyline-unbounded | 4 | 3/3 | 3 | 5–5 | 0 | 0.423 | — | — | 161863 |
 | skyline-unbounded | 5 | 3/3 | 3 | 6–6 | 0 | 10.137 | — | — | 5258586 |
 | skyline-unbounded | 6 | 3/3 | 0 | 6–7 | 1 | 10.138 | — | — | 5142685 |
-

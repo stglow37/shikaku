@@ -62,6 +62,11 @@ class BenchmarkTests(unittest.TestCase):
                  str(outputs[0]), "--output", str(analysis)],
                 capture_output=True, text=True)
             self.assertEqual(analyzed.returncode, 0, analyzed.stderr)
+            csv_bytes = (analysis / "summary.csv").read_bytes()
+            self.assertNotIn(b"\r\r\n", csv_bytes)
+            markdown = (analysis / "summary.md").read_text(encoding="utf-8")
+            self.assertTrue(markdown.endswith("\n"))
+            self.assertFalse(markdown.endswith("\n\n"))
             rendered = subprocess.run(
                 [sys.executable, "-m", "experiments.render_benchmarks",
                  str(analysis / "summary.json")], capture_output=True, text=True)

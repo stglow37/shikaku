@@ -24,4 +24,3 @@ within one solver family. A timeout is not evidence of infeasibility.
 | cpsat-baseline-no-hints-pilot | 4 | 1/1 | 1 | 5–5 | 0 | 0.642 | 0.001 | 0.008 | 184 |
 | skyline-unbounded-pilot | 4 | 1/1 | 1 | 5–5 | 0 | 0.371 | — | — | 161863 |
 | skyline-unbounded-pilot | 5 | 1/1 | 0 | 5–6 | 1 | 1.150 | — | — | 575287 |
-
