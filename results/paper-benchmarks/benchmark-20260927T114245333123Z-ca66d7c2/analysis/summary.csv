@@ -1,0 +1,8 @@
+role,suite,n,requested_runs,completed_runs,process_timeouts,errors,exact_runs,best_lower_bound,best_upper_bound,median_gap,median_process_seconds,median_elapsed_seconds,median_model_build_seconds,median_solve_seconds,median_nodes
+ablation,cpsat-baseline-no-hints-pilot,4,1,1,0,0,1,5,5,0,0.6417629999996279,0.46339240000088466,0.0013849999995727558,0.007555700000011711,184
+ablation,skyline-unbounded-pilot,4,1,1,0,0,1,5,5,0,0.3712021999999706,0.2471707000004244,,,161863
+ablation,skyline-unbounded-pilot,5,1,1,0,0,0,5,6,1,1.1502208000001701,1.0000236999985646,,,575287
+construction,strips-pilot,5,1,1,0,0,1,6,6,0,0.6357813999984501,0.4420353999994404,0.0013424999997369014,0.006248300000152085,84
+exact,cpsat-baseline-hints-pilot,4,1,1,0,0,1,5,5,0,0.5750919000001886,0.3976545999994414,0.002492300000085379,0.008487000000968692,181
+exact,skyline-bounded-pilot,4,1,1,0,0,1,5,5,0,0.12140900000122201,0.0001038999998854706,,,33
+exact,skyline-bounded-pilot,5,1,1,0,0,1,6,6,0,0.1414136999992479,0.00030309999965538736,,,113

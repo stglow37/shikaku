@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "repeats": 1,
+  "wall_timeout_grace_seconds": 20,
+  "suites": [
+    {
+      "name": "skyline-bounded-pilot",
+      "role": "exact",
+      "solver": {
+        "solver": "skyline",
+        "options": {
+          "prune": true
+        }
+      },
+      "sizes": [
+        4,
+        5
+      ],
+      "time_limit_seconds": 1
+    },
+    {
+      "name": "skyline-unbounded-pilot",
+      "role": "ablation",
+      "solver": {
+        "solver": "skyline",
+        "options": {
+          "prune": false
+        }
+      },
+      "sizes": [
+        4,
+        5
+      ],
+      "time_limit_seconds": 1
+    },
+    {
+      "name": "cpsat-baseline-hints-pilot",
+      "role": "exact",
+      "solver": {
+        "solver": "cpsat",
+        "options": {
+          "num_workers": 1,
+          "random_seed": 0,
+          "seed_strategy": "baseline",
+          "use_hints": true
+        }
+      },
+      "sizes": [
+        4
+      ],
+      "time_limit_seconds": 1
+    },
+    {
+      "name": "cpsat-baseline-no-hints-pilot",
+      "role": "ablation",
+      "solver": {
+        "solver": "cpsat",
+        "options": {
+          "num_workers": 1,
+          "random_seed": 0,
+          "seed_strategy": "baseline",
+          "use_hints": false
+        }
+      },
+      "sizes": [
+        4
+      ],
+      "time_limit_seconds": 1
+    },
+    {
+      "name": "strips-pilot",
+      "role": "construction",
+      "solver": {
+        "solver": "strips",
+        "options": {
+          "max_parts": 3,
+          "workers": 1,
+          "seed": 0
+        }
+      },
+      "sizes": [
+        5
+      ],
+      "time_limit_seconds": 1
+    }
+  ]
+}

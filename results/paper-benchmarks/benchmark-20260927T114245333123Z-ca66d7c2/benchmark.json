@@ -1,0 +1,795 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-27T11:42:45.339509+00:00",
+  "status": "COMPLETED",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\stglo\\AppData\\Local\\Temp\\shikaku-python312\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "ortools": "9.15.6755",
+    "protobuf": "6.33.6",
+    "numpy": "2.5.3"
+  },
+  "git_head": "2979bb6fe3f1d7d1559776af57253acef4e152e6",
+  "git_status": "",
+  "configuration_source": "C:\\Users\\stglo\\Desktop\\projects\\shikaku\\experiments\\configs\\paper_benchmark_pilot.json",
+  "configuration": {
+    "schema_version": 1,
+    "repeats": 1,
+    "wall_timeout_grace_seconds": 20,
+    "suites": [
+      {
+        "name": "skyline-bounded-pilot",
+        "role": "exact",
+        "solver": {
+          "solver": "skyline",
+          "options": {
+            "prune": true
+          }
+        },
+        "sizes": [
+          4,
+          5
+        ],
+        "time_limit_seconds": 1
+      },
+      {
+        "name": "skyline-unbounded-pilot",
+        "role": "ablation",
+        "solver": {
+          "solver": "skyline",
+          "options": {
+            "prune": false
+          }
+        },
+        "sizes": [
+          4,
+          5
+        ],
+        "time_limit_seconds": 1
+      },
+      {
+        "name": "cpsat-baseline-hints-pilot",
+        "role": "exact",
+        "solver": {
+          "solver": "cpsat",
+          "options": {
+            "num_workers": 1,
+            "random_seed": 0,
+            "seed_strategy": "baseline",
+            "use_hints": true
+          }
+        },
+        "sizes": [
+          4
+        ],
+        "time_limit_seconds": 1
+      },
+      {
+        "name": "cpsat-baseline-no-hints-pilot",
+        "role": "ablation",
+        "solver": {
+          "solver": "cpsat",
+          "options": {
+            "num_workers": 1,
+            "random_seed": 0,
+            "seed_strategy": "baseline",
+            "use_hints": false
+          }
+        },
+        "sizes": [
+          4
+        ],
+        "time_limit_seconds": 1
+      },
+      {
+        "name": "strips-pilot",
+        "role": "construction",
+        "solver": {
+          "solver": "strips",
+          "options": {
+            "max_parts": 3,
+            "workers": 1,
+            "seed": 0
+          }
+        },
+        "sizes": [
+          5
+        ],
+        "time_limit_seconds": 1
+      }
+    ]
+  },
+  "source_sha256": {
+    "shikaku/__init__.py": "8987cd5d93b69270bc873bac27c91fb0eb30a8957d8491c209267afbd24ea7e6",
+    "shikaku/__main__.py": "56a07b4ed541afcbccebe623fb757c26f0e71eb64f9abac561afa558ea9de6e7",
+    "shikaku/bounds.py": "d7c60bb520884365b12855ca05e4d3b528b9c46e1d94aa4053062dd76f3ab91d",
+    "shikaku/config.py": "077b9c636ca1f3e072687c4b4fcd8e1b2c09159b4e8c7517e40906d5a9fedfde",
+    "shikaku/constructions.py": "ea408cd2fac5b5ed3a1d57ea39cd21e8462150878782a59b254765b95219c93f",
+    "shikaku/dispatch.py": "869ed2d22f959ef289601e21b4ce7948413bae270082dbcb0fd2d18cc37e7915",
+    "shikaku/extensions.py": "7b40e183236e9bf9f3faecc67e1c5f21b999c0e4c7155b1a095a43813ae8d9e2",
+    "shikaku/improved_constructions.py": "dd72e34b8b0f0dac7023fbffba1f5b971dbbe0f33e1c3da77d1395f3bfb7f0a7",
+    "shikaku/known.py": "01c7e46fc8e82fb732d75b75e97fe18c5966f8ec2dcec675bb0681b3893c96e7",
+    "shikaku/model.py": "576b466830480662d894d2321ed8a2d0fea75d4eca648a3245fedda6350872de",
+    "shikaku/solvers/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "shikaku/solvers/cpsat.py": "37cfe4b1cb64f48ad46d049cbdcb02d7b09dcfac023b4389cb248fc6367959c0",
+    "shikaku/solvers/skyline.py": "cd1963f025ef4693b6ed42bbcb4e3f292082fe0dfa5d863e2b29a354b96b78c6",
+    "shikaku/solvers/strips.py": "a101a3de28f17dc33151951e59dcc0f76a448306cd215d27fa0ec887b9b698c6",
+    "shikaku/validation.py": "be81594c17be44ae48429810853d2a85cb491acd473e658e537deecb832a0aea",
+    "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/analyze_benchmarks.py": "938198c68bde1b6f39749e812722c425ea560e7b21c01ce8db2608c9b52c3a4f",
+    "experiments/benchmark.py": "7cb3714667a915b3701ea19bfac7462dd1f8977e6d5ad7fe6400eef8ff5b277d",
+    "experiments/render_research.py": "ed6f041a1ed35b60d36093d714e3d9035509225ed800be7a67d3231d6dfcdf36",
+    "experiments/run.py": "c4459490ae02480f55bcfc3fd892f1ef48eadc5f20be2bb56743866fab1092e6",
+    "experiments/summarize.py": "6c47a6006c95aa7e3d9b6bf02533343d86b8d4ab92a0d4607e6ad274dfda53e2",
+    "experiments/theory_strip.py": "c2eabccb124e3545cf8b9414f1e77baf858275bc93d01a152bd4049ccb718e8a",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/oracle.py": "726ed86fad7b3db49f88f96cd9c87fd888a72def8f9cb0ad63ccba7633847b08",
+    "tests/test_benchmark.py": "14b7efc87a08e43d74831ba0970540b62fe0a5f0bf1b8d52b57eb9b84f822002",
+    "tests/test_bounds.py": "792dbd6ba31fb475efe7ff65936b58298546094f7c7eed6c3e6f5403a9e528e8",
+    "tests/test_constructions_improved.py": "11b3952a0746ad5c9612340de48ddf27d632554764bbca108a7fb6d4ae29d206",
+    "tests/test_correctness.py": "f55f98d4ea50dd838c47c0e486a8877d6a998893dea4f22caf3bd6ab4dd9fad0",
+    "tests/test_cpsat.py": "76f50253cd049ff09738c5ce062c2a8e061e9d1b3843c5c92c71f97ded9e1aae",
+    "tests/test_extensions.py": "75a6bd7c923393ceaa3c1ebb021513cbf865e8e8da657725f4c3b64d92081412",
+    "tests/test_integration.py": "71102788c569876542c80b116b21fa2d0ee3302e85b0f5ea0259010d4b91c17f",
+    "tests/test_strips.py": "0f5030aeddee8dad62bea3f495ae0f7e36de9caacbe6f01bb54b1c96076243c6",
+    "tests/test_validation.py": "35606aa6193d4f8e183c9f780a63f3bb47d880b55701376cdb8bf25f5611a1af"
+  },
+  "trials": [
+    {
+      "trial_id": "skyline-bounded-pilot__n4__r1",
+      "suite": "skyline-bounded-pilot",
+      "role": "exact",
+      "repetition": 1,
+      "n": 4,
+      "outcome": "COMPLETED",
+      "process_elapsed_seconds": 0.12140900000122201,
+      "verified_score": 5,
+      "result": {
+        "n": 4,
+        "status": "OPTIMAL",
+        "k": 5,
+        "lower_bound": 5,
+        "upper_bound": 5,
+        "initial_lower_bound": 4,
+        "area_upper_bound": 5,
+        "termination": "upper_bound_reached",
+        "pruning": true,
+        "nodes": 33,
+        "pruned_nodes": 23,
+        "complete_partitions": 1,
+        "elapsed_seconds": 0.0001038999998854706,
+        "distinct_areas": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "rectangles": [
+          {
+            "row": 0,
+            "col": 0,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "height": 2,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "height": 2,
+            "width": 2
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "height": 3,
+            "width": 1
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "height": 2,
+            "width": 3
+          }
+        ],
+        "configuration": {
+          "solver": "skyline",
+          "options": {
+            "prune": true
+          }
+        }
+      },
+      "stderr_tail": ""
+    },
+    {
+      "trial_id": "skyline-unbounded-pilot__n4__r1",
+      "suite": "skyline-unbounded-pilot",
+      "role": "ablation",
+      "repetition": 1,
+      "n": 4,
+      "outcome": "COMPLETED",
+      "process_elapsed_seconds": 0.3712021999999706,
+      "verified_score": 5,
+      "result": {
+        "n": 4,
+        "status": "OPTIMAL",
+        "k": 5,
+        "lower_bound": 5,
+        "upper_bound": 5,
+        "initial_lower_bound": 4,
+        "area_upper_bound": 5,
+        "termination": "search_exhausted",
+        "pruning": false,
+        "nodes": 161863,
+        "pruned_nodes": 0,
+        "complete_partitions": 70878,
+        "elapsed_seconds": 0.2471707000004244,
+        "distinct_areas": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "rectangles": [
+          {
+            "row": 0,
+            "col": 0,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "height": 2,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "height": 2,
+            "width": 2
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "height": 3,
+            "width": 1
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "height": 2,
+            "width": 3
+          }
+        ],
+        "configuration": {
+          "solver": "skyline",
+          "options": {
+            "prune": false
+          }
+        }
+      },
+      "stderr_tail": ""
+    },
+    {
+      "trial_id": "cpsat-baseline-hints-pilot__n4__r1",
+      "suite": "cpsat-baseline-hints-pilot",
+      "role": "exact",
+      "repetition": 1,
+      "n": 4,
+      "outcome": "COMPLETED",
+      "process_elapsed_seconds": 0.5750919000001886,
+      "verified_score": 5,
+      "result": {
+        "n": 4,
+        "solver": "cpsat",
+        "status": "OPTIMAL",
+        "solver_status": "OPTIMAL",
+        "k": 5,
+        "lower_bound": 5,
+        "upper_bound": 5,
+        "initial_lower_bound": 4,
+        "area_upper_bound": 5,
+        "solver_objective": 5.0,
+        "solver_upper_bound": 5,
+        "termination": "cp_sat_optimal",
+        "witness_source": "cp_sat",
+        "nodes": 181,
+        "branches": 181,
+        "conflicts": 2,
+        "rectangle_variables": 100,
+        "area_variables": 9,
+        "cell_rectangle_incidences": 400,
+        "dependency_import_seconds": 0.3865267999990465,
+        "model_build_seconds": 0.002492300000085379,
+        "solve_call_seconds": 0.008487000000968692,
+        "solver_wall_seconds": 0.0073664,
+        "elapsed_seconds": 0.3976545999994414,
+        "time_limit_seconds": 1.0,
+        "ortools_version": "9.15.6755",
+        "num_workers": 1,
+        "random_seed": 0,
+        "seed_strategy": "baseline",
+        "use_hints": true,
+        "distinct_areas": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "rectangles": [
+          {
+            "row": 0,
+            "col": 0,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "height": 3,
+            "width": 2
+          },
+          {
+            "row": 0,
+            "col": 3,
+            "height": 4,
+            "width": 1
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "height": 3,
+            "width": 1
+          },
+          {
+            "row": 3,
+            "col": 1,
+            "height": 1,
+            "width": 2
+          }
+        ],
+        "configuration": {
+          "solver": "cpsat",
+          "options": {
+            "num_workers": 1,
+            "random_seed": 0,
+            "seed_strategy": "baseline",
+            "use_hints": true
+          }
+        }
+      },
+      "stderr_tail": ""
+    },
+    {
+      "trial_id": "cpsat-baseline-no-hints-pilot__n4__r1",
+      "suite": "cpsat-baseline-no-hints-pilot",
+      "role": "ablation",
+      "repetition": 1,
+      "n": 4,
+      "outcome": "COMPLETED",
+      "process_elapsed_seconds": 0.6417629999996279,
+      "verified_score": 5,
+      "result": {
+        "n": 4,
+        "solver": "cpsat",
+        "status": "OPTIMAL",
+        "solver_status": "OPTIMAL",
+        "k": 5,
+        "lower_bound": 5,
+        "upper_bound": 5,
+        "initial_lower_bound": 4,
+        "area_upper_bound": 5,
+        "solver_objective": 5.0,
+        "solver_upper_bound": 5,
+        "termination": "cp_sat_optimal",
+        "witness_source": "cp_sat",
+        "nodes": 184,
+        "branches": 184,
+        "conflicts": 1,
+        "rectangle_variables": 100,
+        "area_variables": 9,
+        "cell_rectangle_incidences": 400,
+        "dependency_import_seconds": 0.45430470000064815,
+        "model_build_seconds": 0.0013849999995727558,
+        "solve_call_seconds": 0.007555700000011711,
+        "solver_wall_seconds": 0.006610700000000001,
+        "elapsed_seconds": 0.46339240000088466,
+        "time_limit_seconds": 1.0,
+        "ortools_version": "9.15.6755",
+        "num_workers": 1,
+        "random_seed": 0,
+        "seed_strategy": "baseline",
+        "use_hints": false,
+        "distinct_areas": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "rectangles": [
+          {
+            "row": 0,
+            "col": 3,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 0,
+            "height": 2,
+            "width": 3
+          },
+          {
+            "row": 1,
+            "col": 3,
+            "height": 3,
+            "width": 1
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "height": 2,
+            "width": 1
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "height": 2,
+            "width": 2
+          }
+        ],
+        "configuration": {
+          "solver": "cpsat",
+          "options": {
+            "num_workers": 1,
+            "random_seed": 0,
+            "seed_strategy": "baseline",
+            "use_hints": false
+          }
+        }
+      },
+      "stderr_tail": ""
+    },
+    {
+      "trial_id": "strips-pilot__n5__r1",
+      "suite": "strips-pilot",
+      "role": "construction",
+      "repetition": 1,
+      "n": 5,
+      "outcome": "COMPLETED",
+      "process_elapsed_seconds": 0.6357813999984501,
+      "verified_score": 6,
+      "result": {
+        "n": 5,
+        "solver": "strips",
+        "status": "OPTIMAL",
+        "k": 6,
+        "lower_bound": 6,
+        "upper_bound": 6,
+        "initial_lower_bound": 5,
+        "area_upper_bound": 6,
+        "termination": "upper_bound_reached",
+        "restricted_status": "OPTIMAL",
+        "restricted_lower_bound": 6,
+        "restricted_upper_bound": 6,
+        "max_parts": 3,
+        "max_height": 5,
+        "workers": 1,
+        "seed": 0,
+        "strip_configurations": 25,
+        "nodes": 84,
+        "conflicts": 0,
+        "elapsed_seconds": 0.4420353999994404,
+        "model_build_seconds": 0.0013424999997369014,
+        "solve_call_seconds": 0.006248300000152085,
+        "solver_wall_seconds": 0.0051741,
+        "time_limit": 1.0,
+        "distinct_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "rectangles": [
+          {
+            "row": 0,
+            "col": 0,
+            "height": 1,
+            "width": 5
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "height": 1,
+            "width": 4
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "height": 1,
+            "width": 2
+          },
+          {
+            "row": 2,
+            "col": 2,
+            "height": 1,
+            "width": 3
+          },
+          {
+            "row": 3,
+            "col": 0,
+            "height": 2,
+            "width": 2
+          },
+          {
+            "row": 3,
+            "col": 2,
+            "height": 2,
+            "width": 3
+          }
+        ],
+        "configuration": {
+          "solver": "strips",
+          "options": {
+            "max_parts": 3,
+            "workers": 1,
+            "seed": 0
+          }
+        }
+      },
+      "stderr_tail": ""
+    },
+    {
+      "trial_id": "skyline-bounded-pilot__n5__r1",
+      "suite": "skyline-bounded-pilot",
+      "role": "exact",
+      "repetition": 1,
+      "n": 5,
+      "outcome": "COMPLETED",
+      "process_elapsed_seconds": 0.1414136999992479,
+      "verified_score": 6,
+      "result": {
+        "n": 5,
+        "status": "OPTIMAL",
+        "k": 6,
+        "lower_bound": 6,
+        "upper_bound": 6,
+        "initial_lower_bound": 5,
+        "area_upper_bound": 6,
+        "termination": "upper_bound_reached",
+        "pruning": true,
+        "nodes": 113,
+        "pruned_nodes": 85,
+        "complete_partitions": 1,
+        "elapsed_seconds": 0.00030309999965538736,
+        "distinct_areas": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "rectangles": [
+          {
+            "row": 0,
+            "col": 0,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 2,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 3,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 4,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "height": 2,
+            "width": 1
+          },
+          {
+            "row": 1,
+            "col": 1,
+            "height": 2,
+            "width": 2
+          },
+          {
+            "row": 1,
+            "col": 3,
+            "height": 3,
+            "width": 2
+          },
+          {
+            "row": 3,
+            "col": 0,
+            "height": 1,
+            "width": 3
+          },
+          {
+            "row": 4,
+            "col": 0,
+            "height": 1,
+            "width": 5
+          }
+        ],
+        "configuration": {
+          "solver": "skyline",
+          "options": {
+            "prune": true
+          }
+        }
+      },
+      "stderr_tail": ""
+    },
+    {
+      "trial_id": "skyline-unbounded-pilot__n5__r1",
+      "suite": "skyline-unbounded-pilot",
+      "role": "ablation",
+      "repetition": 1,
+      "n": 5,
+      "outcome": "COMPLETED",
+      "process_elapsed_seconds": 1.1502208000001701,
+      "verified_score": 5,
+      "result": {
+        "n": 5,
+        "status": "TIME_LIMIT",
+        "k": null,
+        "lower_bound": 5,
+        "upper_bound": 6,
+        "initial_lower_bound": 5,
+        "area_upper_bound": 6,
+        "termination": "time_limit",
+        "pruning": false,
+        "nodes": 575287,
+        "pruned_nodes": 0,
+        "complete_partitions": 250972,
+        "elapsed_seconds": 1.0000236999985646,
+        "distinct_areas": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "rectangles": [
+          {
+            "row": 0,
+            "col": 0,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 0,
+            "col": 1,
+            "height": 1,
+            "width": 4
+          },
+          {
+            "row": 1,
+            "col": 0,
+            "height": 1,
+            "width": 2
+          },
+          {
+            "row": 1,
+            "col": 2,
+            "height": 1,
+            "width": 3
+          },
+          {
+            "row": 2,
+            "col": 0,
+            "height": 1,
+            "width": 5
+          },
+          {
+            "row": 3,
+            "col": 0,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 3,
+            "col": 1,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 3,
+            "col": 2,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 3,
+            "col": 3,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 3,
+            "col": 4,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 4,
+            "col": 0,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 4,
+            "col": 1,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 4,
+            "col": 2,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 4,
+            "col": 3,
+            "height": 1,
+            "width": 1
+          },
+          {
+            "row": 4,
+            "col": 4,
+            "height": 1,
+            "width": 1
+          }
+        ],
+        "configuration": {
+          "solver": "skyline",
+          "options": {
+            "prune": false
+          }
+        }
+      },
+      "stderr_tail": ""
+    }
+  ],
+  "completed_utc": "2026-09-27T11:42:49.581822+00:00"
+}
