@@ -37,7 +37,7 @@ class IntegrationTests(unittest.TestCase):
             path = Path(folder) / "config.json"
             for config, valid in configs:
                 with self.subTest(config=config):
-                    path.write_text(json.dumps(config))
+                    path.write_text(json.dumps(config), encoding="utf-8")
                     if valid:
                         self.assertEqual(load_config(path), config)
                     else:
@@ -50,6 +50,16 @@ class IntegrationTests(unittest.TestCase):
              "experiments/configs/strips.json"], capture_output=True, text=True)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("applies only to skyline", result.stderr)
+
+    def test_summary_generation_uses_portable_utf8_io(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder) / "summary"
+            result = subprocess.run(
+                [sys.executable, "-m", "experiments.summarize", "--max-n", "1",
+                 "--output", str(output)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            table = (output / "table.md").read_text(encoding="utf-8")
+            self.assertIn("정확값", table)
 
 
 if __name__ == "__main__":

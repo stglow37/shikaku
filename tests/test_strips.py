@@ -74,7 +74,8 @@ class StripTests(unittest.TestCase):
                 solve(n)
         for kwargs in [{"max_parts": 0}, {"max_height": -1}, {"workers": 0},
                        {"seed": -1}, {"seed": 2**31}, {"time_limit": float("nan")},
-                       {"time_limit": -1}]:
+                       {"time_limit": float("inf")}, {"time_limit": -1},
+                       {"time_limit": True}, {"time_limit": "1"}]:
             with self.assertRaises(ValueError):
                 solve(5, **kwargs)
 

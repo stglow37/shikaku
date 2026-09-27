@@ -34,7 +34,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("summary", type=Path)
     args = parser.parse_args()
-    data = json.loads(args.summary.read_text())
+    data = json.loads(args.summary.read_text(encoding="utf-8"))
     destination = args.summary.parent
     by_n = {r["n"]: r for r in data["results"]}
     fig, axs = plt.subplots(1, 2, figsize=(13, 7), layout="constrained")

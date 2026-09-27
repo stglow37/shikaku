@@ -48,7 +48,7 @@ def main():
     comparisons = []
     for directory in args.runs:
         report_path = directory / "report.json"
-        report = json.loads(report_path.read_text())
+        report = json.loads(report_path.read_text(encoding="utf-8"))
         try:
             relative = str(report_path.resolve().relative_to(ROOT))
         except ValueError:
@@ -91,17 +91,19 @@ def main():
         results=list(rows.values()), comparisons=comparisons,
     )
     args.output.mkdir(parents=True)
-    (args.output / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
-    sources = {p.relative_to(ROOT).as_posix(): p.read_text()
+    (args.output / "summary.json").write_text(
+        json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+    sources = {p.relative_to(ROOT).as_posix(): p.read_text(encoding="utf-8")
                for folder in ("shikaku", "experiments", "tests")
                for p in sorted((ROOT / folder).rglob("*.py"))}
-    (args.output / "sources.json").write_text(json.dumps(sources, indent=2) + "\n")
+    (args.output / "sources.json").write_text(
+        json.dumps(sources, indent=2) + "\n", encoding="utf-8")
     table = ["| n | 기존 구성 | 개선한 명시적 구성 | 최선 하한 | 상한 U(n) | 정확값 |",
              "|---:|---:|---:|---:|---:|---:|"]
     for row in rows.values():
         table.append("| {n} | {classical_lower} | {explicit_lower} | {lower_bound} | {upper_bound} | {exact} |".format(
             **row, exact=row["k"] if row["k"] is not None else "미확정"))
-    (args.output / "table.md").write_text("\n".join(table) + "\n")
+    (args.output / "table.md").write_text("\n".join(table) + "\n", encoding="utf-8")
     print("\n".join(table))
     print(f"Saved: {args.output}")
 

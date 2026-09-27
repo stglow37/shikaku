@@ -49,7 +49,10 @@ def solve(n: int, *, time_limit: float | None = None, max_parts: int = 3,
     if (not isinstance(seed, int) or isinstance(seed, bool)
             or not 0 <= seed <= 2**31 - 1):
         raise ValueError("seed must be an integer between 0 and 2**31 - 1")
-    if time_limit is not None and (not isfinite(time_limit) or time_limit < 0):
+    if time_limit is not None and (
+        isinstance(time_limit, bool) or not isinstance(time_limit, (int, float))
+        or not isfinite(time_limit) or time_limit < 0
+    ):
         raise ValueError("time_limit must be finite and non-negative")
     started = perf_counter()
     possible_areas = sorted({h * w for h in range(1, n + 1) for w in range(1, n + 1)})

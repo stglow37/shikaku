@@ -35,7 +35,7 @@ def main() -> None:
         rows.append(dict(n=n, count=count, theorem_lower=guaranteed, upper=upper,
                          rectangles=len(rectangles), exact=count==upper))
     output = Path(__file__).with_name('theory_strip_results.json')
-    output.write_text(json.dumps(rows, indent=2)+'\n')
+    output.write_text(json.dumps(rows, indent=2) + '\n', encoding="utf-8")
     print(json.dumps({'verified_n_range':[16,256], 'exact_cases':[r for r in rows if r['exact']],
                       'results':str(output)}, indent=2))
 
