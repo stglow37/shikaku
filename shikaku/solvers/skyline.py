@@ -40,7 +40,10 @@ def solve(n: int, *, prune: bool = True, time_limit: float | None = None) -> dic
     """
     if not isinstance(n, int) or isinstance(n, bool) or n < 1:
         raise ValueError("n must be a positive integer")
-    if time_limit is not None and (not isfinite(time_limit) or time_limit < 0):
+    if time_limit is not None and (
+        isinstance(time_limit, bool) or not isinstance(time_limit, (int, float))
+        or not isfinite(time_limit) or time_limit < 0
+    ):
         raise ValueError("time_limit must be finite and non-negative")
     started = perf_counter()
     areas = sorted({a * b for a in range(1, n + 1) for b in range(1, n + 1)})

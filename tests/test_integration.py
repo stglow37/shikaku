@@ -27,8 +27,11 @@ class IntegrationTests(unittest.TestCase):
     def test_configs_and_invalid_options(self):
         configs = [
             ({"solver": "cpsat", "options": {"num_workers": 1}}, True),
+            ({"solver": "cpsat", "options": {
+                "seed_strategy": "best_known", "use_hints": False}}, True),
             ({"solver": "strips", "options": {"max_parts": 3}}, True),
             ({"solver": "cpsat", "options": {"prune": False}}, False),
+            ({"solver": "cpsat", "options": {"seed_strategy": "unknown"}}, False),
             ({"solver": "strips", "options": {"workers": True}}, False),
             ({"solver": "strips", "options": {"max_height": 0}}, False),
             ({"solver": "skyline", "options": {}}, False),

@@ -41,7 +41,7 @@ class BaselineTests(unittest.TestCase):
         for n in (0, -1, 1.5, True):
             with self.assertRaises(ValueError):
                 solve(n)
-        for limit in (-1, float("nan"), float("inf")):
+        for limit in (-1, float("nan"), float("inf"), True, "1"):
             with self.assertRaises(ValueError):
                 solve(2, time_limit=limit)
 

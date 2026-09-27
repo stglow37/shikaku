@@ -6,6 +6,7 @@ from time import perf_counter
 
 from ..bounds import additional_bound
 from ..constructions import initial_partition
+from ..improved_constructions import best_partition, partition_11_over_8
 from ..model import Rect
 from ..validation import validate_partition
 
@@ -23,8 +24,23 @@ def _load_ortools():
     return ortools.__version__, cp_model
 
 
+def seed_partition(n: int, strategy: str) -> list[Rect]:
+    """Return the independently verified construction used to seed CP-SAT."""
+    if strategy == "baseline":
+        return initial_partition(n)
+    if strategy == "eleven_eighths":
+        if n < 16:
+            raise ValueError("the eleven_eighths seed requires n >= 16")
+        return partition_11_over_8(n)
+    if strategy == "best_known":
+        return best_partition(n)
+    raise ValueError(
+        "seed_strategy must be baseline, eleven_eighths, or best_known")
+
+
 def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
-          random_seed: int = 0, log_search_progress: bool = False) -> dict:
+          random_seed: int = 0, log_search_progress: bool = False,
+          seed_strategy: str = "baseline", use_hints: bool = True) -> dict:
     """Return a validated partition and certified interval containing k(n).
 
     time_limit applies to the CP-SAT solve call only. Model construction,
@@ -45,6 +61,10 @@ def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
         raise ValueError("random_seed must be an integer between 0 and 2**31-1")
     if type(log_search_progress) is not bool:
         raise ValueError("log_search_progress must be boolean")
+    if type(use_hints) is not bool:
+        raise ValueError("use_hints must be boolean")
+    # Validate the strategy before importing the optional dependency.
+    seed_rects = seed_partition(n, seed_strategy)
 
     started = perf_counter()
     version, cp_model = _load_ortools()
@@ -52,7 +72,7 @@ def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
     areas = sorted({height * width for height in range(1, n + 1)
                     for width in range(1, n + 1)})
     area_upper = additional_bound(areas, frozenset(), n * n)
-    best_rects = initial_partition(n)
+    best_rects = seed_rects
     initial_lower = best = validate_partition(n, best_rects)
     seed_rects = set(best_rects)
     seed_areas = {rect.area for rect in best_rects}
@@ -76,7 +96,8 @@ def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
                         for col in range(left, right):
                             by_cell[row * n + col].append(variable)
                     incidences += rect.area
-                    model.add_hint(variable, int(rect in seed_rects))
+                    if use_hints:
+                        model.add_hint(variable, int(rect in seed_rects))
 
     for covering in by_cell:
         model.add_exactly_one(covering)
@@ -86,7 +107,8 @@ def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
         # Equivalence, not only y <= sum(x): a feasible incumbent's objective
         # already equals its actual distinct-area count, even before optimality.
         model.add_max_equality(present[area], by_area[area])
-        model.add_hint(present[area], int(area in seed_areas))
+        if use_hints:
+            model.add_hint(present[area], int(area in seed_areas))
     objective = sum(present.values())
     model.add(objective >= initial_lower)
     model.add(objective <= area_upper)
@@ -112,7 +134,8 @@ def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
 
     upper = area_upper
     solver_upper = solver_objective = None
-    witness_source = "initial_construction"
+    witness_source = ("initial_construction" if seed_strategy == "baseline"
+                      else f"{seed_strategy}_construction")
     if status in (cp_model.OPTIMAL, cp_model.FEASIBLE):
         candidate = [rect for rect, variable in zip(rects, selected)
                      if solver.value(variable)]
@@ -162,6 +185,7 @@ def solve(n: int, *, time_limit: float | None = None, num_workers: int = 1,
         "elapsed_seconds": perf_counter() - started,
         "time_limit_seconds": time_limit, "ortools_version": version,
         "num_workers": num_workers, "random_seed": random_seed,
+        "seed_strategy": seed_strategy, "use_hints": use_hints,
         "distinct_areas": sorted({rect.area for rect in best_rects}),
         "rectangles": [asdict(rect) for rect in best_rects],
     }

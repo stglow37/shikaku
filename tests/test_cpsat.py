@@ -6,7 +6,7 @@ import unittest
 from unittest.mock import patch
 
 from shikaku.model import Rect
-from shikaku.solvers.cpsat import solve
+from shikaku.solvers.cpsat import seed_partition, solve
 from shikaku.validation import validate_partition
 from tests.oracle import cell_oracle
 
@@ -23,10 +23,23 @@ class CpSatInputTests(unittest.TestCase):
             {"time_limit": value} for value in (-1, float("nan"), float("inf"), True, "1")
         ] + [{"num_workers": value} for value in (0, -1, True, 1.5)] + [
             {"random_seed": value} for value in (-1, True, 2**31, 1.5)
-        ] + [{"log_search_progress": 1}]
+        ] + [{"log_search_progress": 1}, {"use_hints": 1},
+             {"seed_strategy": "unknown"}, {"seed_strategy": 1}]
         for option in options:
             with self.subTest(option=option), self.assertRaises(ValueError):
                 solve(2, **option)
+
+    def test_seed_strategies_are_explicit_and_validated(self):
+        baseline = seed_partition(16, "baseline")
+        eleven_eighths = seed_partition(16, "eleven_eighths")
+        best_known = seed_partition(20, "best_known")
+        self.assertEqual(validate_partition(16, baseline), 20)
+        self.assertEqual(validate_partition(16, eleven_eighths), 21)
+        self.assertEqual(validate_partition(20, best_known), 27)
+        with self.assertRaises(ValueError):
+            seed_partition(15, "eleven_eighths")
+        with self.assertRaises(ValueError):
+            seed_partition(16, "unknown")
 
     def test_missing_optional_dependency_has_install_instruction(self):
         real_import = __import__
@@ -70,6 +83,13 @@ class CpSatTests(unittest.TestCase):
                          result["lower_bound"])
         self.assertGreaterEqual(result["model_build_seconds"], 0)
         self.assertGreaterEqual(result["elapsed_seconds"], result["model_build_seconds"])
+
+    def test_zero_time_can_use_improved_seed_without_hints(self):
+        result = solve(16, time_limit=0, seed_strategy="eleven_eighths",
+                       use_hints=False)
+        self.assertEqual(result["k"], 21)
+        self.assertEqual(result["seed_strategy"], "eleven_eighths")
+        self.assertFalse(result["use_hints"])
 
     def test_exact_by_independent_bounds_even_when_solver_unknown(self):
         result = solve(7, time_limit=0)

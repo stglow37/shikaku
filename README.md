@@ -31,6 +31,10 @@ python -m pip install -r requirements-cpsat.txt
 python -m shikaku 14 --config experiments/configs/cpsat.json --time-limit 10
 python -m shikaku 20 --config experiments/configs/strips4.json --time-limit 15
 python -m experiments.theory_strip
+
+# 정보학 논문용 재현 benchmark
+python -m experiments.benchmark --config experiments/configs/paper_benchmark_pilot.json
+python -m experiments.analyze_benchmarks results/<benchmark-directory>
 ```
 
 기본 설정은 높이 배열 탐색과 면적 상한이다. `--no-prune`은 설정 파일보다 우선하며
@@ -52,6 +56,8 @@ python -m experiments.theory_strip
 - `tests/`: 독립 완전탐색과 회귀 검증.
 - `experiments/configs/`: 기준 설정 및 전체 열거 설정.
 - `experiments/run.py`: 설정별 실험 실행 및 소스 스냅샷 보관.
+- `experiments/benchmark.py`: 격리·반복·재개 가능한 비교 및 제거 실험.
+- `docs/paper_experiments.md`: 논문용 실험 조건과 해석 기준.
 - `results/`: 실행별 결과. 기존 결과는 `legacy-baseline/`에 보존했다.
 - `outdated/`: 이전 연구 버전. 현재 코드에서 가져오지 않는다.
 
