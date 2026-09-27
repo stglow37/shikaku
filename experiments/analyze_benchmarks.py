@@ -48,6 +48,8 @@ def aggregate(report: dict) -> list[dict]:
         results = [trial["result"] for trial in completed]
         gaps = [result["upper_bound"] - result["lower_bound"] for result in results]
         exact = [result.get("k") is not None for result in results]
+        initial_certified = [
+            result.get("termination") == "certified_initial_bounds" for result in results]
         rows.append({
             "role": suite_meta[suite_name]["role"], "suite": suite_name, "n": n,
             "requested_runs": report["configuration"]["repeats"],
@@ -56,6 +58,9 @@ def aggregate(report: dict) -> list[dict]:
             "errors": sum(t["outcome"] not in {"COMPLETED", "PROCESS_TIMEOUT"}
                           for t in trials),
             "exact_runs": sum(exact),
+            "initial_certified_runs": sum(initial_certified),
+            "median_lower_bound": _number(results, "lower_bound"),
+            "median_upper_bound": _number(results, "upper_bound"),
             "best_lower_bound": max((r["lower_bound"] for r in results), default=None),
             "best_upper_bound": min((r["upper_bound"] for r in results), default=None),
             "median_gap": median(gaps) if gaps else None,
@@ -82,14 +87,15 @@ def _markdown(rows: list[dict]) -> str:
             continue
         lines.extend([
             f"## {role}", "",
-            "| suite | n | completed | exact | best bounds | gap | process s | build s | solve s | nodes |",
-            "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+            "| suite | n | completed | exact | initial | combined bounds | median gap | process s | build s | solve s | nodes |",
+            "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
         ])
         for row in selected:
             bounds = f"{_fmt(row['best_lower_bound'])}–{_fmt(row['best_upper_bound'])}"
             lines.append(
                 f"| {row['suite']} | {row['n']} | {row['completed_runs']}/"
-                f"{row['requested_runs']} | {row['exact_runs']} | {bounds} | "
+                f"{row['requested_runs']} | {row['exact_runs']} | "
+                f"{row['initial_certified_runs']} | {bounds} | "
                 f"{_fmt(row['median_gap'])} | {_fmt(row['median_process_seconds'])} | "
                 f"{_fmt(row['median_model_build_seconds'])} | "
                 f"{_fmt(row['median_solve_seconds'])} | {_fmt(row['median_nodes'], 0)} |"

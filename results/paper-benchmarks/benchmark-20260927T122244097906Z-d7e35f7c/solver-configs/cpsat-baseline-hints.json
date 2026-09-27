@@ -1,0 +1,9 @@
+{
+  "solver": "cpsat",
+  "options": {
+    "num_workers": 1,
+    "random_seed": 0,
+    "seed_strategy": "baseline",
+    "use_hints": true
+  }
+}

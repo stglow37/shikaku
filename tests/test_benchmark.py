@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import xml.etree.ElementTree as ET
 
 from experiments.analyze_benchmarks import aggregate
 from experiments.benchmark import _validate_benchmark
@@ -54,6 +55,18 @@ class BenchmarkTests(unittest.TestCase):
             rows = aggregate(report)
             self.assertEqual(len(rows), 1)
             self.assertEqual(rows[0]["exact_runs"], 1)
+            self.assertEqual(rows[0]["initial_certified_runs"], 0)
+            analysis = outputs[0] / "analysis"
+            analyzed = subprocess.run(
+                [sys.executable, "-m", "experiments.analyze_benchmarks",
+                 str(outputs[0]), "--output", str(analysis)],
+                capture_output=True, text=True)
+            self.assertEqual(analyzed.returncode, 0, analyzed.stderr)
+            rendered = subprocess.run(
+                [sys.executable, "-m", "experiments.render_benchmarks",
+                 str(analysis / "summary.json")], capture_output=True, text=True)
+            self.assertEqual(rendered.returncode, 0, rendered.stderr)
+            ET.parse(analysis / "benchmark.svg")
 
 
 if __name__ == "__main__":

@@ -6,6 +6,10 @@
 - [최종 결과표](research-20260920/table.md): n=1,…,40의 하한·상한·정확값.
 - [검증된 좌표와 출처](research-20260920/summary.json): 모든 최종 증거와 원본 실행 연결.
 - [분할 그림](research-20260920/partitions.png), [상·하한 그림](research-20260920/bounds.png).
+- [정보학 논문용 비교 실험](../docs/paper_benchmark_results.md): 동일 예산의 solver 비교와 제거 실험.
+
+`paper-benchmarks/`에는 pilot, 수정 전 진단 실행, 수정 후 최종 159-trial 실행을
+보관한다. 각 실행의 `STATUS.md`가 있으면 그 용도를 우선 확인한다.
 
 `20260920T...` 폴더들은 이번 연구의 개별 실행 기록이다. 미확정 결과도
 실험 이력으로 보존하며, 최종 결론은 위 집계 자료에서 확인한다.

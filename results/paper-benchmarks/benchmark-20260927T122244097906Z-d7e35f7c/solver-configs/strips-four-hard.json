@@ -1,0 +1,9 @@
+{
+  "solver": "strips",
+  "options": {
+    "max_parts": 4,
+    "max_height": 6,
+    "workers": 1,
+    "seed": 0
+  }
+}

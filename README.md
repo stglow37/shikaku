@@ -13,6 +13,8 @@ Python 3.10 이상. 기준 탐색과 명시적 구성은 표준 라이브러리�
 - 가능한 넓이의 상한 U(n)을 소수 체로 계산하고, 이 상한만으로는 점근 계수
   √2를 낮출 수 없음을 분석했다. [상한 분석](docs/area_upper.md).
 - [이번 연구 보고서](docs/research_progress.md)에 계산 결과, 검증과 남은 문제를 정리했다.
+- [정보학 논문용 benchmark 결과](docs/paper_benchmark_results.md)에 정확 풀이 비교,
+  제거 실험, 초기 구성과 힌트의 효과를 정리했다.
 - n=1,…,26 및 n=33의 정확값과 n≤40의 검증된 범위는
   [최종 결과표](results/research-20260920/table.md)에서 확인할 수 있다.
 

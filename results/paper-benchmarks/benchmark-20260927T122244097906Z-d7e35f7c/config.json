@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "repeats": 3,
+  "wall_timeout_grace_seconds": 60,
+  "suites": [
+    {
+      "name": "skyline-bounded",
+      "role": "exact",
+      "solver": {
+        "solver": "skyline",
+        "options": {
+          "prune": true
+        }
+      },
+      "sizes": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "time_limit_seconds": 10
+    },
+    {
+      "name": "cpsat-baseline-hints",
+      "role": "exact",
+      "solver": {
+        "solver": "cpsat",
+        "options": {
+          "num_workers": 1,
+          "random_seed": 0,
+          "seed_strategy": "baseline",
+          "use_hints": true
+        }
+      },
+      "sizes": [
+        4,
+        5,
+        6,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "time_limit_seconds": 10
+    },
+    {
+      "name": "skyline-unbounded",
+      "role": "ablation",
+      "solver": {
+        "solver": "skyline",
+        "options": {
+          "prune": false
+        }
+      },
+      "sizes": [
+        4,
+        5,
+        6
+      ],
+      "time_limit_seconds": 10
+    },
+    {
+      "name": "cpsat-baseline-no-hints",
+      "role": "ablation",
+      "solver": {
+        "solver": "cpsat",
+        "options": {
+          "num_workers": 1,
+          "random_seed": 0,
+          "seed_strategy": "baseline",
+          "use_hints": false
+        }
+      },
+      "sizes": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "time_limit_seconds": 10
+    },
+    {
+      "name": "cpsat-eleven-eighths-hints",
+      "role": "ablation",
+      "solver": {
+        "solver": "cpsat",
+        "options": {
+          "num_workers": 1,
+          "random_seed": 0,
+          "seed_strategy": "eleven_eighths",
+          "use_hints": true
+        }
+      },
+      "sizes": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "time_limit_seconds": 10
+    },
+    {
+      "name": "cpsat-eleven-eighths-no-hints",
+      "role": "ablation",
+      "solver": {
+        "solver": "cpsat",
+        "options": {
+          "num_workers": 1,
+          "random_seed": 0,
+          "seed_strategy": "eleven_eighths",
+          "use_hints": false
+        }
+      },
+      "sizes": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "time_limit_seconds": 10
+    },
+    {
+      "name": "cpsat-best-known-hard",
+      "role": "construction",
+      "solver": {
+        "solver": "cpsat",
+        "options": {
+          "num_workers": 1,
+          "random_seed": 0,
+          "seed_strategy": "best_known",
+          "use_hints": true
+        }
+      },
+      "sizes": [
+        24,
+        27,
+        30,
+        33
+      ],
+      "time_limit_seconds": 30
+    },
+    {
+      "name": "strips-four-hard",
+      "role": "construction",
+      "solver": {
+        "solver": "strips",
+        "options": {
+          "max_parts": 4,
+          "max_height": 6,
+          "workers": 1,
+          "seed": 0
+        }
+      },
+      "sizes": [
+        24,
+        27,
+        30,
+        33,
+        36,
+        40
+      ],
+      "time_limit_seconds": 30
+    }
+  ]
+}
