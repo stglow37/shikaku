@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 27px sans-serif; fill: #172033; }
+      .boxtext { font: 700 20px sans-serif; fill: #172033; }
+      .small { font: 17px sans-serif; fill: #334155; }
+      .box { stroke: #334155; stroke-width: 2.2; rx: 12; ry: 12; }
+      .line { stroke: #334155; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .yes { font: 700 17px sans-serif; fill: #047857; }
+      .no { font: 700 17px sans-serif; fill: #b45309; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" fill="#ffffff"/>
+  <text x="600" y="40" text-anchor="middle" class="title">정확값 인증 절차</text>
+
+  <rect x="40" y="85" width="210" height="80" fill="#dbeafe" class="box"/>
+  <text x="145" y="117" text-anchor="middle" class="boxtext">명시적 구성</text>
+  <text x="145" y="145" text-anchor="middle" class="small">검증된 하한 B</text>
+
+  <rect x="40" y="210" width="210" height="80" fill="#fef3c7" class="box"/>
+  <text x="145" y="242" text-anchor="middle" class="boxtext">넓이 기반 분석</text>
+  <text x="145" y="270" text-anchor="middle" class="small">독립 상한 U(n)</text>
+
+  <path d="M250 125 L340 125 L340 185 L390 185" class="line"/>
+  <path d="M250 250 L340 250 L340 205 L390 205" class="line"/>
+
+  <polygon points="470,125 550,195 470,265 390,195" fill="#f1f5f9" stroke="#334155" stroke-width="2.2"/>
+  <text x="470" y="188" text-anchor="middle" class="boxtext">B = U(n)?</text>
+  <text x="470" y="215" text-anchor="middle" class="small">초기 bounds 비교</text>
+
+  <path d="M550 195 L650 195" class="line"/>
+  <text x="593" y="181" class="yes">예</text>
+  <rect x="650" y="155" width="200" height="80" fill="#dcfce7" class="box"/>
+  <text x="750" y="188" text-anchor="middle" class="boxtext">정확값 인증</text>
+  <text x="750" y="216" text-anchor="middle" class="small">탐색 생략</text>
+
+  <path d="M470 265 L470 340 L570 340" class="line"/>
+  <text x="483" y="307" class="no">아니오</text>
+  <rect x="570" y="300" width="230" height="80" fill="#e0e7ff" class="box"/>
+  <text x="685" y="333" text-anchor="middle" class="boxtext">Skyline / CP-SAT</text>
+  <text x="685" y="361" text-anchor="middle" class="small">후보 좌표와 계산 상한</text>
+
+  <path d="M800 340 L870 340" class="line"/>
+  <rect x="870" y="300" width="250" height="80" fill="#fce7f3" class="box"/>
+  <text x="995" y="333" text-anchor="middle" class="boxtext">독립 좌표 검증</text>
+  <text x="995" y="361" text-anchor="middle" class="small">경계 · 겹침 · 빈칸 · 넓이 수</text>
+
+  <path d="M995 380 L995 435 L850 435" class="line"/>
+  <rect x="570" y="405" width="280" height="70" fill="#f1f5f9" class="box"/>
+  <text x="710" y="435" text-anchor="middle" class="boxtext">최종 하한과 상한 비교</text>
+  <text x="710" y="461" text-anchor="middle" class="small">일치하면 정확값, 아니면 범위 보고</text>
+</svg>
