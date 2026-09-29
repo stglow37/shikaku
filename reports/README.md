@@ -9,6 +9,15 @@
   - 초록과 1–4절을 포함한다.
   - 상세 초안을 그대로 이어 붙이지 않고 중복을 줄인 축약본이다.
   - 최종 원고를 수정할 때는 이 파일을 우선 편집한다.
+- **paper_draft/complete_report_revised.md**
+  - 통합 원고의 구조와 용어를 전면적으로 다듬은 개정 사본이다.
+  - 국·영문 초록, 상한·하한의 대칭적 서술, Skyline·CP-SAT의 병렬적 설명 및 정확값 결과를 포함한다.
+- **paper_draft/complete_report_condensed.md**
+  - 3페이지 제한에 맞추기 위해 개정 사본을 다시 압축한 원고이다.
+  - 핵심 증명과 계산 모형은 유지하고 전체 정확값 표와 부가 실험 설명을 줄였다.
+- **paper_draft/complete_report_revised.pdf**
+  - 개정 사본의 조판 상태를 확인하기 위한 PDF 출력본이다.
+  - Markdown 원고와 최종 제출 양식이 바뀌면 다시 생성해야 한다.
 - **paper_draft/section1_introduction.md**
   - 간결한 서론의 상세 초안이다.
 - **paper_draft/section2_mathematical_bounds.md**
@@ -19,6 +28,9 @@
   - 결론과 후속 연구 방향의 상세 초안이다.
 - **paper_draft/section2_construction.svg**
   - \(16t\times16t\) 하한 구성의 A–D 영역을 설명하는 벡터 도식이다.
+- **paper_draft/section2_construction_t1.svg**
+  - \(t=1\)인 실제 \(16\times16\) 분할을 넓이 숫자와 A–D 표지만으로 나타낸 벡터 그림이다.
+  - 개정본과 축약본에서는 이 그림을 사용한다.
 - **paper_draft/section3_certification.svg**
   - 하한·상한·정확 풀이기·독립 검증의 관계를 설명하는 후보 도식이다.
   - 현재 **complete_report.md**에는 포함하지 않았다. 지면과 가독성을 확인한 뒤 필요할 때 사용한다.
